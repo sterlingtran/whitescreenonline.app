@@ -1,9 +1,8 @@
 User-agent: *
 Allow: /
 
-# Disallow admin or private paths (none currently, placeholder)
-Disallow: /admin/
-Disallow: /private/
+# User-specific page — no indexing value
+Disallow: /favorites
 
 # Sitemap location
 Sitemap: https://whitescreenonline.app/sitemap.xml
