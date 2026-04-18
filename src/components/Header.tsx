@@ -1,5 +1,6 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { CATEGORIES } from '@/src/data/tools';
 
 export function Header() {
   const location = useLocation();
@@ -12,6 +13,8 @@ export function Header() {
     fontWeight: location.pathname === path ? 600 : 400,
     transition: 'color 0.15s',
   });
+
+  const categoryActive = location.pathname.startsWith('/category/');
 
   const goHome = async (event?: React.MouseEvent<HTMLAnchorElement>) => {
     event?.preventDefault();
@@ -47,6 +50,35 @@ export function Header() {
         {/* Desktop nav */}
         <nav style={{ display: 'flex', gap: 28, alignItems: 'center' }} className="desktop-nav">
           <Link to="/" style={linkStyle('/')} onMouseEnter={e => (e.currentTarget.style.color = 'var(--text)')} onMouseLeave={e => (e.currentTarget.style.color = location.pathname === '/' ? 'var(--text)' : 'var(--text-2)')}>Home</Link>
+          <div className="category-menu" style={{ position: 'relative' }}>
+            <button
+              style={{
+                fontSize: 14,
+                color: categoryActive ? 'var(--text)' : 'var(--text-2)',
+                fontWeight: categoryActive ? 600 : 400,
+                transition: 'color 0.15s',
+                background: 'none',
+                border: 'none',
+                padding: 0,
+                cursor: 'pointer',
+              }}
+              onMouseEnter={e => (e.currentTarget.style.color = 'var(--text)')}
+              onMouseLeave={e => (e.currentTarget.style.color = categoryActive ? 'var(--text)' : 'var(--text-2)')}
+            >
+              Categories
+            </button>
+            <div className="category-dropdown">
+              {CATEGORIES.map(category => (
+                <Link
+                  key={category.id}
+                  to={`/category/${category.slug}`}
+                  className="category-dropdown-link"
+                >
+                  {category.name}
+                </Link>
+              ))}
+            </div>
+          </div>
           <Link to="/favorites" style={linkStyle('/favorites')} onMouseEnter={e => (e.currentTarget.style.color = 'var(--text)')} onMouseLeave={e => (e.currentTarget.style.color = location.pathname === '/favorites' ? 'var(--text)' : 'var(--text-2)')}>Favorites</Link>
         </nav>
 
@@ -69,6 +101,10 @@ export function Header() {
           {[
             { label: 'Home', to: '/' },
             { label: 'Favorites', to: '/favorites' },
+            ...CATEGORIES.map(category => ({
+              label: category.name,
+              to: `/category/${category.slug}`,
+            })),
           ].map(({ label, to }) => (
             <Link
               key={to}
@@ -83,6 +119,43 @@ export function Header() {
       )}
 
       <style>{`
+        .category-dropdown {
+          position: absolute;
+          top: calc(100% + 14px);
+          right: 50%;
+          transform: translateX(50%) translateY(-4px);
+          width: 230px;
+          padding: 8px;
+          background: var(--surface);
+          border: 1px solid var(--border);
+          border-radius: var(--radius-md);
+          box-shadow: var(--shadow-lg);
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity 0.15s, transform 0.15s;
+        }
+
+        .category-menu:hover .category-dropdown,
+        .category-menu:focus-within .category-dropdown {
+          opacity: 1;
+          pointer-events: auto;
+          transform: translateX(50%) translateY(0);
+        }
+
+        .category-dropdown-link {
+          display: block;
+          padding: 9px 10px;
+          border-radius: var(--radius-sm);
+          color: var(--text-2);
+          font-size: 13px;
+          transition: background 0.15s, color 0.15s;
+        }
+
+        .category-dropdown-link:hover {
+          background: var(--bg);
+          color: var(--text);
+        }
+
         @media (max-width: 640px) {
           .desktop-nav { display: none !important; }
           .mobile-menu-btn { display: flex !important; }

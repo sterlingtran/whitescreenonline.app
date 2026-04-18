@@ -331,16 +331,23 @@
   </url>
 
   <url>
+    <loc>https://www.whitescreenonline.app/about</loc>
+    <lastmod>2026-04-18</lastmod>
+    <priority>0.5</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <url>
     <loc>https://www.whitescreenonline.app/privacy-policy</loc>
     <lastmod>2026-04-18</lastmod>
-    <priority>0.4</priority>
+    <priority>0.3</priority>
     <changefreq>yearly</changefreq>
   </url>
 
   <url>
     <loc>https://www.whitescreenonline.app/terms</loc>
     <lastmod>2026-04-18</lastmod>
-    <priority>0.4</priority>
+    <priority>0.3</priority>
     <changefreq>yearly</changefreq>
   </url>
 
