@@ -40,6 +40,20 @@ export function Home() {
             url: 'https://whitescreenonline.app/',
             description: 'Free full-screen color tools for display testing and creative projects.',
           },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'White Screen Online',
+            url: 'https://whitescreenonline.app/',
+            description: 'Free full-screen color display tools for monitor testing, dead pixel detection, photography lighting, and creative projects.',
+            applicationCategory: 'UtilitiesApplication',
+            operatingSystem: 'Any',
+            offers: {
+              '@type': 'Offer',
+              price: '0',
+              priceCurrency: 'USD',
+            },
+          },
           faqSchema,
         ]}
       />
