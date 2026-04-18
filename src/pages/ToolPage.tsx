@@ -56,7 +56,6 @@ function ToolRenderer({ tool }: { tool: NonNullable<ReturnType<typeof getTool>> 
     hiitTimer:             Placeholders.HIITTimer,
     focusScreen:           Placeholders.FocusScreen,
     meditationBreather:    Placeholders.MeditationBreather,
-    fireplaceAmbient:      Placeholders.FireplaceAmbient,
     rainAmbient:           Placeholders.RainAmbient,
     particleSystem:        Placeholders.ParticleSystem,
     productivityDashboard: Placeholders.ProductivityDashboard,

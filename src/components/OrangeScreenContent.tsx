@@ -5,7 +5,7 @@ const USE_CASES = [
   { title: 'Maximum sleep protection', desc: 'Warmer than yellow, nearly as effective as red for melatonin preservation' },
   { title: 'Sunset simulation', desc: 'Mimic natural evening light to signal bedtime to your body clock' },
   { title: 'Comfortable evening reading', desc: 'Brighter than red, warmer than yellow — the ideal nighttime balance' },
-  { title: 'Cozy ambient lighting', desc: 'Fireplace-like warmth without the fire, perfect for relaxation' },
+  { title: 'Cozy ambient lighting', desc: 'Warm ambient color for relaxation and evening wind-downs' },
   { title: 'Evening computer work', desc: 'Work productively while protecting sleep cycles before bed' },
   { title: 'Golden hour photography', desc: 'Warm sunset-style lighting for portraits and product shots any time' },
   { title: 'Seasonal mood lighting', desc: 'Autumn atmosphere and winter coziness on demand' },
@@ -36,7 +36,7 @@ const IN_DEPTH = [
   },
   {
     title: 'Cozy Ambient & Mood Lighting',
-    body: 'Orange creates warm, inviting, fireplace-like atmospheres perfect for relaxation, meditation, evening socializing, or romantic settings. The warmth evokes comfort, safety, and coziness — psychological associations developed over millennia around fire. Use orange ambient lighting for dinner parties, meditation sessions, evening wind-down routines, or any scenario where you want warmth without the intensity of red or the brightness of yellow.',
+    body: 'Orange creates warm, inviting atmospheres perfect for relaxation, meditation, evening socializing, or romantic settings. The warmth evokes comfort, safety, and coziness. Use orange ambient lighting for dinner parties, meditation sessions, evening wind-down routines, or any scenario where you want warmth without the intensity of red or the brightness of yellow.',
   },
   {
     title: 'Golden Hour Photography',

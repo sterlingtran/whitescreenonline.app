@@ -1069,60 +1069,6 @@ export function MeditationBreather() {
   );
 }
 
-// Fireplace Ambient
-export function FireplaceAmbient() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-    let animationFrame = 0;
-    let cancelled = false;
-
-    canvas.width = canvas.offsetWidth;
-    canvas.height = canvas.offsetHeight;
-
-    const animate = () => {
-      if (cancelled) return;
-
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-      // Draw flickering flames
-      for (let i = 0; i < 5; i++) {
-        const x = (canvas.width / 5) * (i + 0.5);
-        const flameHeight = Math.random() * 200 + 100;
-
-        const gradient = ctx.createLinearGradient(x, canvas.height, x, canvas.height - flameHeight);
-        gradient.addColorStop(0, 'rgba(255, 100, 0, 0.8)');
-        gradient.addColorStop(0.5, 'rgba(255, 200, 0, 0.5)');
-        gradient.addColorStop(1, 'rgba(255, 255, 100, 0)');
-
-        ctx.fillStyle = gradient;
-        ctx.beginPath();
-        ctx.ellipse(x, canvas.height, 50 + Math.random() * 30, flameHeight, 0, 0, Math.PI * 2);
-        ctx.fill();
-      }
-
-      animationFrame = requestAnimationFrame(animate);
-    };
-
-    animate();
-
-    return () => {
-      cancelled = true;
-      cancelAnimationFrame(animationFrame);
-    };
-  }, []);
-
-  return (
-    <canvas ref={canvasRef} className="w-full aspect-video rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-900" />
-  );
-}
-
 // Rain Ambient
 export function RainAmbient() {
   const canvasRef = useRef<HTMLCanvasElement>(null);

@@ -48,7 +48,6 @@ const CARD_BG: Record<string, string> = {
   'focus-screen':          '#1e40af',
   'meditation-breather':   '#0d9488',
   'productivity-dashboard':'#4f46e5',
-  'fireplace-ambient':     '#92400e',
   'rain-ambient':          '#0a1929',
   'particle-system':       '#1e1b4b',
 };
@@ -96,7 +95,6 @@ const CARD_SUB: Record<string, string> = {
   'focus-screen':          'Deep work',
   'meditation-breather':   'Calm & breathe',
   'productivity-dashboard':'All-in-one focus',
-  'fireplace-ambient':     'Cozy ambiance',
   'rain-ambient':          'Relaxing rain',
   'particle-system':       'Ambient display',
 };
@@ -264,10 +262,6 @@ function MiniPreview({ slug }: { slug: string }) {
           <div style={{ width: 52, height: 52, borderRadius: '50%', border: '7px solid rgba(255,220,100,0.85)', boxShadow: '0 0 14px rgba(255,220,100,0.4), inset 0 0 10px rgba(255,220,100,0.15)' }} />
         </div>
       );
-
-    /* ── Fireplace ── */
-    case 'fireplace-ambient':
-      return <div style={{ height: '100%', background: 'linear-gradient(to top, #78350f 0%, #b45309 30%, #dc2626 65%, #f97316 100%)' }} />;
 
     /* ── Rain ── */
     case 'rain-ambient':

@@ -1739,54 +1739,7 @@ export const TOOLS: Tool[] = [
     ],
   },
 
-  // ENTERTAINMENT (4)
-  {
-    id: 'fireplace-ambient',
-    name: 'Fireplace Ambient',
-    slug: 'fireplace-ambient',
-    category: 'entertainment',
-    description: 'Relaxing fireplace animation',
-    longDescription: 'Relaxing fireplace animation with optional crackling sound.',
-    icon: 'Flame',
-    uses: ['Relaxation', 'Ambient', 'Cozy'],
-    seoTitle: 'Fireplace Screensaver Online - Virtual Cozy Flame',
-    seoDescription: 'Relaxing animated virtual fireplace screensaver for a cozy atmosphere. Optional crackling sound. Perfect for ambiance, cold days, and presentations. Free online.',
-    relatedTools: ['rain-ambient', 'starfield-screensaver'],
-    componentKey: 'fireplaceAmbient',
-    controls: [
-      {
-        id: 'flameIntensity',
-        label: 'Flame Intensity',
-        type: 'slider',
-        defaultValue: 70,
-        min: 30,
-        max: 100,
-      },
-      {
-        id: 'fireColor',
-        label: 'Fire Color',
-        type: 'select',
-        defaultValue: 'orange',
-        options: [
-          { label: 'Orange', value: 'orange' },
-          { label: 'Blue', value: 'blue' },
-          { label: 'Green', value: 'green' },
-        ],
-      },
-      {
-        id: 'sound',
-        label: 'Crackling Sound',
-        type: 'toggle',
-        defaultValue: false,
-      },
-      {
-        id: 'duration',
-        label: 'Duration (infinite)',
-        type: 'toggle',
-        defaultValue: true,
-      },
-    ],
-  },
+  // ENTERTAINMENT (3)
   {
     id: 'rain-ambient',
     name: 'Rain Ambient',
@@ -1798,7 +1751,7 @@ export const TOOLS: Tool[] = [
     uses: ['Relaxation', 'Ambient', 'Sleep'],
     seoTitle: 'Rain Screensaver Online - Relaxing Rain Sound & Visual',
     seoDescription: 'Calming animated rain screensaver with optional thunder sound effects. Perfect for relaxation, sleep, focus, and ambient backgrounds. Free online.',
-    relatedTools: ['fireplace-ambient', 'starfield-screensaver'],
+    relatedTools: ['particle-system', 'starfield-screensaver'],
     componentKey: 'rainAmbient',
     controls: [
       {
@@ -1840,7 +1793,7 @@ export const TOOLS: Tool[] = [
     uses: ['Relaxation', 'Ambient', 'Entertainment'],
     seoTitle: 'Particle System Screensaver - Floating Particle Display',
     seoDescription: 'Customizable floating particle animation screensaver. Adjust particle type, count, speed, and colors for unique visual effects. Free online.',
-    relatedTools: ['fireplace-ambient', 'rain-ambient'],
+    relatedTools: ['rain-ambient', 'starfield-screensaver'],
     componentKey: 'particleSystem',
     controls: [
       {

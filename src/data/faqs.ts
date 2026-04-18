@@ -280,11 +280,6 @@ export const TOOL_FAQS: Record<string, FAQ[]> = {
     { q: 'What breathing pattern does it use?', a: 'By default, the tool uses a 4-7-8 pattern (inhale 4 seconds, hold 7 seconds, exhale 8 seconds). This pattern activates the parasympathetic nervous system and promotes relaxation.' },
     { q: 'How long should I use the breathing tool?', a: 'Even 2–3 minutes of guided breathing can measurably reduce cortisol and heart rate. For best results, practice for 5–10 minutes daily.' },
   ],
-  'fireplace-ambient': [
-    { q: 'What is the fireplace ambient tool?', a: 'The fireplace ambient tool displays an animated virtual fire with optional crackling fire sounds, creating a warm and cozy atmosphere on any screen.' },
-    { q: 'Does the virtual fireplace have sound?', a: 'Yes. Enable the sound option to play realistic crackling fire audio, completing the ambient fireplace experience.' },
-    { q: 'Can I use this as a TV screensaver?', a: 'Yes. Cast your browser tab to a smart TV and enable fullscreen mode for a cozy fireplace display similar to streaming fireplace videos, but running entirely in your browser.' },
-  ],
   'rain-ambient': [
     { q: 'What is the rain ambient tool?', a: 'The rain ambient tool simulates falling rain on your screen with optional thunder sounds, creating a calming atmospheric experience for relaxation, focus, or sleep.' },
     { q: 'Does rain sound help with focus and sleep?', a: 'Many studies and user reports confirm that rain sounds (a form of pink noise) help mask distracting background noise and create a consistent audio environment conducive to concentration and sleep.' },
