@@ -601,7 +601,7 @@ export const TOOLS: Tool[] = [
     id: 'tip-screen',
     name: 'Tip Screen',
     slug: 'tip-screen',
-    category: 'solid-colors',
+    category: 'prank-screens',
     description: 'Digital tipping interface for point-of-sale systems',
     longDescription: 'A full-screen tip selection display designed for tablets and point-of-sale counters. Set the subtotal, customize up to three tip percentages, and present a clean tapping interface to customers. Works on any browser — no app required.',
     icon: 'DollarSign',
