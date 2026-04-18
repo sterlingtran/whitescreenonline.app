@@ -22,6 +22,11 @@ import { PomodoroTimerContent } from '@/src/components/PomodoroTimerContent';
 import { StopwatchContent } from '@/src/components/StopwatchContent';
 import { CustomColorScreenContent } from '@/src/components/CustomColorScreenContent';
 import { ZoomLightingContent } from '@/src/components/ZoomLightingContent';
+import { HIITTimerContent } from '@/src/components/HIITTimerContent';
+import { FocusScreenContent } from '@/src/components/FocusScreenContent';
+import { MeditationBreatherContent } from '@/src/components/MeditationBreatherContent';
+import { RingLightContent } from '@/src/components/RingLightContent';
+import { RGBGradientContent } from '@/src/components/RGBGradientContent';
 import { ColorScreen } from '@/src/tools/ColorScreen';
 import { CustomColorScreen } from '@/src/tools/CustomColorScreen';
 import { DeadPixelTest } from '@/src/tools/DeadPixelTest';
@@ -169,9 +174,9 @@ export function ToolPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://whitescreenonline.app/' },
-      ...(category ? [{ '@type': 'ListItem', position: 2, name: category.name, item: `https://whitescreenonline.app/category/${category.slug}` }] : []),
-      { '@type': 'ListItem', position: category ? 3 : 2, name: tool.name, item: `https://whitescreenonline.app/tool/${tool.slug}` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.whitescreenonline.app/' },
+      ...(category ? [{ '@type': 'ListItem', position: 2, name: category.name, item: `https://www.whitescreenonline.app/category/${category.slug}` }] : []),
+      { '@type': 'ListItem', position: category ? 3 : 2, name: tool.name, item: `https://www.whitescreenonline.app/tool/${tool.slug}` },
     ],
   };
 
@@ -180,7 +185,7 @@ export function ToolPage() {
       <PageSEO
         title={tool.seoTitle}
         description={tool.seoDescription}
-        canonical={`https://whitescreenonline.app/tool/${tool.slug}`}
+        canonical={`https://www.whitescreenonline.app/tool/${tool.slug}`}
         jsonLd={[faqSchema, breadcrumbSchema]}
       />
 
@@ -259,6 +264,16 @@ export function ToolPage() {
           <CustomColorScreenContent />
         ) : tool.slug === 'zoom-lighting' ? (
           <ZoomLightingContent />
+        ) : tool.slug === 'hiit-timer' ? (
+          <HIITTimerContent />
+        ) : tool.slug === 'focus-screen' ? (
+          <FocusScreenContent />
+        ) : tool.slug === 'meditation-breather' ? (
+          <MeditationBreatherContent />
+        ) : tool.slug === 'ring-light' ? (
+          <RingLightContent />
+        ) : tool.slug === 'rgb-gradient' ? (
+          <RGBGradientContent />
         ) : (
           <section style={{ marginBottom: 36 }}>
             <h2 className="h2" style={{ marginBottom: 10 }}>About {tool.name}</h2>
