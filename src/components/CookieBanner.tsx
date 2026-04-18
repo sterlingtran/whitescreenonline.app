@@ -89,7 +89,7 @@ export function CookieBanner() {
             fontSize: 13,
             fontWeight: 600,
             color: '#fff',
-            background: 'var(--accent)',
+            background: '#2563eb',
             border: 'none',
             borderRadius: 'var(--radius)',
             padding: '6px 16px',
