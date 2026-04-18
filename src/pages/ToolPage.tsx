@@ -17,6 +17,11 @@ import { DeadPixelContent } from '@/src/components/DeadPixelContent';
 import { OrangeScreenContent } from '@/src/components/OrangeScreenContent';
 import { PurpleScreenContent } from '@/src/components/PurpleScreenContent';
 import { PinkScreenContent } from '@/src/components/PinkScreenContent';
+import { CountdownTimerContent } from '@/src/components/CountdownTimerContent';
+import { PomodoroTimerContent } from '@/src/components/PomodoroTimerContent';
+import { StopwatchContent } from '@/src/components/StopwatchContent';
+import { CustomColorScreenContent } from '@/src/components/CustomColorScreenContent';
+import { ZoomLightingContent } from '@/src/components/ZoomLightingContent';
 import { ColorScreen } from '@/src/tools/ColorScreen';
 import { CustomColorScreen } from '@/src/tools/CustomColorScreen';
 import { DeadPixelTest } from '@/src/tools/DeadPixelTest';
@@ -244,6 +249,16 @@ export function ToolPage() {
           <PurpleScreenContent />
         ) : tool.slug === 'pink-screen' ? (
           <PinkScreenContent />
+        ) : tool.slug === 'countdown-timer' ? (
+          <CountdownTimerContent />
+        ) : tool.slug === 'pomodoro-timer' ? (
+          <PomodoroTimerContent />
+        ) : tool.slug === 'stopwatch' ? (
+          <StopwatchContent />
+        ) : tool.slug === 'custom-color-screen' ? (
+          <CustomColorScreenContent />
+        ) : tool.slug === 'zoom-lighting' ? (
+          <ZoomLightingContent />
         ) : (
           <section style={{ marginBottom: 36 }}>
             <h2 className="h2" style={{ marginBottom: 10 }}>About {tool.name}</h2>
