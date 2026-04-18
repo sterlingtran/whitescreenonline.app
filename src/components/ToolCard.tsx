@@ -53,7 +53,7 @@ const CARD_BG: Record<string, string> = {
 };
 
 /* Cards with light backgrounds need dark text (compact variant) */
-const LIGHT_BG = new Set(['white-screen', 'yellow-screen']);
+const LIGHT_BG = new Set(['white-screen', 'yellow-screen', 'tip-screen']);
 
 /* Short use-case subtitle shown on compact card */
 const CARD_SUB: Record<string, string> = {
