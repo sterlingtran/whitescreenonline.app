@@ -4,9 +4,12 @@ import { ChevronRight } from 'lucide-react';
 import { PageSEO } from '@/src/components/PageSEO';
 import { Layout } from '@/src/components/Layout';
 import { getBlogPost } from '@/src/data/blog';
-import { PhoneScreenRingLight } from '@/src/components/blog/PhoneScreenRingLight';
-import { DeadPixelGuide }       from '@/src/components/blog/DeadPixelGuide';
-import { WorkFromHomeFocus }    from '@/src/components/blog/WorkFromHomeFocus';
+import { PhoneScreenRingLight }  from '@/src/components/blog/PhoneScreenRingLight';
+import { DeadPixelGuide }        from '@/src/components/blog/DeadPixelGuide';
+import { WorkFromHomeFocus }     from '@/src/components/blog/WorkFromHomeFocus';
+import { ColorTemperatureGuide } from '@/src/components/blog/ColorTemperatureGuide';
+import { PomodoroStudyGuide }    from '@/src/components/blog/PomodoroStudyGuide';
+import { OLEDBurnIn }            from '@/src/components/blog/OLEDBurnIn';
 
 function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
@@ -97,7 +100,8 @@ export function BlogPost() {
         <h1 className="h1" style={{ marginBottom: 14, lineHeight: 1.25 }}>{post.title}</h1>
 
         {/* Meta */}
-        <div style={{ display: 'flex', gap: 16, alignItems: 'center', fontSize: 13, color: 'var(--text-3)', marginBottom: 36 }}>
+        <div style={{ display: 'flex', gap: 16, alignItems: 'center', fontSize: 13, color: 'var(--text-3)', marginBottom: 36, flexWrap: 'wrap' }}>
+          <span>By <strong style={{ color: 'var(--text-2)' }}>{post.author}</strong></span>
           <span>{formatDate(post.date)}</span>
           <span style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
             <Clock size={12} />
@@ -108,9 +112,12 @@ export function BlogPost() {
         <hr style={{ border: 'none', borderTop: '1px solid var(--border)', marginBottom: 36 }} />
 
         {/* Post content */}
-        {post.slug === 'phone-screen-as-ring-light'       && <PhoneScreenRingLight post={post} />}
-        {post.slug === 'how-to-test-monitor-dead-pixels'  && <DeadPixelGuide       post={post} />}
-        {post.slug === 'best-focus-tools-working-from-home' && <WorkFromHomeFocus  post={post} />}
+        {post.slug === 'phone-screen-as-ring-light'         && <PhoneScreenRingLight  post={post} />}
+        {post.slug === 'how-to-test-monitor-dead-pixels'   && <DeadPixelGuide        post={post} />}
+        {post.slug === 'best-focus-tools-working-from-home'&& <WorkFromHomeFocus     post={post} />}
+        {post.slug === 'color-temperature-guide'           && <ColorTemperatureGuide post={post} />}
+        {post.slug === 'pomodoro-technique-for-studying'   && <PomodoroStudyGuide    post={post} />}
+        {post.slug === 'oled-burn-in-screensavers'         && <OLEDBurnIn            post={post} />}
 
         {/* Footer nav */}
         <div style={{ marginTop: 48, display: 'flex', gap: 20, fontSize: 14 }}>
