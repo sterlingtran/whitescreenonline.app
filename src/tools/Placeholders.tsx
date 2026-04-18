@@ -102,7 +102,12 @@ export function ZoomLighting() {
     const animate = () => {
       if (cancelled) return;
 
-      ctx.fillStyle = `rgba(255, 180, 77, ${(settings.brightness as number) / 100})`;
+      // Clear to black so brightness alpha has a visible effect
+      ctx.fillStyle = '#000000';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      const brightness = (settings.brightness as number) / 100;
+      ctx.fillStyle = `rgba(255, 180, 77, ${brightness})`;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       // Create spotlight
@@ -111,7 +116,7 @@ export function ZoomLighting() {
         canvas.width / 2, canvas.height / 2, 50 * zoom,
         canvas.width / 2, canvas.height / 2, 300 * zoom
       );
-      gradient.addColorStop(0, 'rgba(255, 200, 100, 0.8)');
+      gradient.addColorStop(0, `rgba(255, 220, 150, ${brightness * 0.8})`);
       gradient.addColorStop(1, 'rgba(255, 180, 77, 0)');
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
