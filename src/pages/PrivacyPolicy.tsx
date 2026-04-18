@@ -17,9 +17,8 @@ export function PrivacyPolicy() {
     <Layout>
       <PageSEO
         title="Privacy Policy - White Screen Online"
-        description="Privacy policy for White Screen Online. How we collect, use, and protect your data — including PIPEDA, GDPR, and CASL compliance information."
-        canonical="https://whitescreenonline.app/privacy-policy"
-        noindex
+        description="Privacy policy for White Screen Online. How we collect, use, and protect your data, including PIPEDA, GDPR, and CASL compliance information."
+        canonical="https://www.whitescreenonline.app/privacy-policy"
       />
 
       <div className="wrap" style={{ maxWidth: 720, paddingTop: 36, paddingBottom: 72 }}>
@@ -69,11 +68,11 @@ export function PrivacyPolicy() {
           We use the following categories of cookies:
         </p>
         <ul style={sx.ul}>
-          <li><strong>Analytics cookies</strong> — Google Analytics sets cookies (_ga, _ga_*, _gid) to distinguish
+          <li><strong>Analytics cookies</strong> - Google Analytics sets cookies (_ga, _ga_*, _gid) to distinguish
             users and sessions. These persist for up to 2 years.</li>
-          <li><strong>Advertising cookies</strong> — Google AdSense sets cookies to serve and measure ads.
+          <li><strong>Advertising cookies</strong> - Google AdSense sets cookies to serve and measure ads.
             These may include cross-site tracking cookies used for interest-based advertising.</li>
-          <li><strong>No essential cookies</strong> — We do not set any session or authentication cookies.
+          <li><strong>No essential cookies</strong> - We do not set any session or authentication cookies.
             The site functions fully without cookies if you block them in your browser.</li>
         </ul>
         <p style={sx.p}>
@@ -100,24 +99,24 @@ export function PrivacyPolicy() {
           personal data are:
         </p>
         <ul style={sx.ul}>
-          <li><strong>Legitimate interests</strong> — Analytics to improve the service (Art. 6(1)(f) GDPR)</li>
-          <li><strong>Consent</strong> — Personalized advertising via Google AdSense (Art. 6(1)(a) GDPR).
+          <li><strong>Legitimate interests</strong> - Analytics to improve the service (Art. 6(1)(f) GDPR)</li>
+          <li><strong>Consent</strong> - Personalized advertising via Google AdSense (Art. 6(1)(a) GDPR).
             You may withdraw consent at any time using the opt-out methods in Section 5.</li>
-          <li><strong>Contract performance</strong> — Responding to direct email inquiries</li>
+          <li><strong>Contract performance</strong> - Responding to direct email inquiries</li>
         </ul>
 
         <h2 style={sx.h2}>5. Third-Party Services</h2>
-        <p style={sx.p}><strong>Google Analytics 4</strong> — Google LLC, USA. Analytics data is processed under
+        <p style={sx.p}><strong>Google Analytics 4</strong> - Google LLC, USA. Analytics data is processed under
           Google's data processing terms. Google may transfer data internationally under Standard Contractual Clauses.
           <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer"
             style={{ color: 'var(--text)', marginLeft: 4 }}>Google Privacy Policy</a></p>
-        <p style={sx.p}><strong>Google AdSense</strong> — Google LLC, USA. AdSense may serve personalized ads
+        <p style={sx.p}><strong>Google AdSense</strong> - Google LLC, USA. AdSense may serve personalized ads
           based on your browsing history. You can opt out of personalized advertising at&nbsp;
           <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer"
             style={{ color: 'var(--text)' }}>adssettings.google.com</a> or through the&nbsp;
           <a href="https://optout.networkadvertising.org/" target="_blank" rel="noopener noreferrer"
             style={{ color: 'var(--text)' }}>NAI opt-out tool</a>.</p>
-        <p style={sx.p}><strong>Vercel Analytics</strong> — Vercel Inc., USA. Lightweight privacy-focused analytics
+        <p style={sx.p}><strong>Vercel Analytics</strong> - Vercel Inc., USA. Lightweight privacy-focused analytics
           that does not use cookies or fingerprinting.
           <a href="https://vercel.com/docs/analytics/privacy-policy" target="_blank" rel="noopener noreferrer"
             style={{ color: 'var(--text)', marginLeft: 4 }}>Vercel Privacy Policy</a></p>
@@ -186,7 +185,7 @@ export function PrivacyPolicy() {
           <Link to="/" style={{ color: 'var(--text-2)' }}
             onMouseEnter={e => (e.currentTarget.style.color = 'var(--text)')}
             onMouseLeave={e => (e.currentTarget.style.color = 'var(--text-2)')}>
-            ← Back to home
+            Back to home
           </Link>
           <Link to="/about" style={{ color: 'var(--text-2)' }}
             onMouseEnter={e => (e.currentTarget.style.color = 'var(--text)')}

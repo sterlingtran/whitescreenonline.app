@@ -8,7 +8,7 @@ interface PageSEOProps {
   ogType?: string;
   twitterCard?: string;
   noindex?: boolean;
-  /** Pass structured data objects — renders as <script type="application/ld+json"> */
+  /** Pass structured data objects - renders as <script type="application/ld+json"> */
   jsonLd?: object | object[];
 }
 
@@ -16,7 +16,7 @@ export function PageSEO({
   title,
   description,
   canonical = 'https://www.whitescreenonline.app/',
-  ogImage = 'https://www.whitescreenonline.app/og-image.svg',
+  ogImage = 'https://www.whitescreenonline.app/og-image.png',
   ogType = 'website',
   twitterCard = 'summary_large_image',
   noindex = false,
@@ -33,6 +33,7 @@ export function PageSEO({
 
   const safeTitle = normalizeText(title);
   const safeDescription = normalizeText(description);
+  const robots = noindex ? 'noindex, follow' : 'index, follow';
 
   const schemas = jsonLd
     ? Array.isArray(jsonLd)
@@ -54,7 +55,7 @@ export function PageSEO({
       <meta name="twitter:description" content={safeDescription} />
       <meta name="twitter:image" content={ogImage} />
       <link rel="canonical" href={canonical} />
-      {noindex && <meta name="robots" content="noindex, follow" />}
+      <meta name="robots" content={robots} />
       {schemas.map((schema, i) => (
         <script key={i} type="application/ld+json">
           {JSON.stringify(schema)}

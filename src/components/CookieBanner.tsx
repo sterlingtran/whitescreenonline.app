@@ -4,9 +4,17 @@ import { X } from 'lucide-react';
 
 const CONSENT_KEY = 'wso_cookie_consent';
 
+type Gtag = (...args: unknown[]) => void;
+
+declare global {
+  interface Window {
+    gtag?: Gtag;
+  }
+}
+
 function grantConsent() {
-  if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
-    (window as any).gtag('consent', 'update', {
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    window.gtag('consent', 'update', {
       analytics_storage:  'granted',
       ad_storage:         'granted',
       ad_user_data:       'granted',
@@ -16,15 +24,15 @@ function grantConsent() {
 }
 
 export function CookieBanner() {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(() => (
+    typeof window !== 'undefined' && !localStorage.getItem(CONSENT_KEY)
+  ));
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
     const stored = localStorage.getItem(CONSENT_KEY);
     if (stored === 'accepted') {
       grantConsent();
-    } else if (!stored) {
-      setVisible(true);
     }
   }, []);
 

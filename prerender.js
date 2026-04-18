@@ -1,5 +1,5 @@
 /**
- * Static prerender script — runs after vite build to generate per-route HTML files.
+ * Static prerender script - runs after vite build to generate per-route HTML files.
  * Usage: node prerender.js  (called automatically by npm run build)
  *
  * React 19 hoists <title>, <meta>, and <link> elements to the beginning of the
@@ -37,13 +37,14 @@ const rawTemplate = readFileSync(resolve(__dirname, 'dist/client/index.html'), '
 
 /**
  * Remove the base/fallback SEO tags from the template.
- * These are replaced per-page by Helmet — keeping both causes duplicates.
- * og:site_name and robots defaults are kept (Helmet doesn't set those per-page).
+ * These are replaced per-page by Helmet - keeping both causes duplicates.
+ * og:site_name is kept because Helmet doesn't set it per-page.
  */
 function stripDefaultSeoTags(html) {
   return html
     .replace(/\n\s*<title>[^<]*<\/title>/g, '')
     .replace(/\n\s*<meta name="description"[^>]*>/g, '')
+    .replace(/\n\s*<meta name="robots"[^>]*>/g, '')
     .replace(/\n\s*<meta property="og:type"[^>]*>/g, '')
     .replace(/\n\s*<meta property="og:title"[^>]*>/g, '')
     .replace(/\n\s*<meta property="og:description"[^>]*>/g, '')

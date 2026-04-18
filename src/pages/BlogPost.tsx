@@ -1,5 +1,5 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { Clock, Tag } from 'lucide-react';
+import { Clock } from 'lucide-react';
 import { ChevronRight } from 'lucide-react';
 import { PageSEO } from '@/src/components/PageSEO';
 import { Layout } from '@/src/components/Layout';
@@ -39,7 +39,7 @@ export function BlogPost() {
     publisher: {
       '@type': 'Organization',
       name: 'White Screen Online',
-      logo: { '@type': 'ImageObject', url: 'https://www.whitescreenonline.app/og-image.svg' },
+      logo: { '@type': 'ImageObject', url: 'https://www.whitescreenonline.app/og-image.png' },
     },
     mainEntityOfPage: { '@type': 'WebPage', '@id': `https://www.whitescreenonline.app/blog/${post.slug}` },
   };

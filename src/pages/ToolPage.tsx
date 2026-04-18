@@ -53,6 +53,14 @@ import { TipScreen } from '@/src/tools/TipScreen';
 import { CountdownTimer } from '@/src/tools/CountdownTimer';
 import * as Placeholders from '@/src/tools/Placeholders';
 
+const CLICK_TO_EXIT_DISABLED_KEYS = new Set([
+  'pomodoroTimer',
+  'stopwatch',
+  'hiitTimer',
+  'focusScreen',
+  'productivityDashboard',
+]);
+
 /* ── Tool renderer ─────────────────────────────── */
 function ToolRenderer({ tool }: { tool: NonNullable<ReturnType<typeof getTool>> }) {
   if (tool.componentKey === 'colorScreen') {
@@ -112,14 +120,18 @@ function ToolWithFullscreen({ tool }: { tool: NonNullable<ReturnType<typeof getT
   const enter = () => ref.current?.requestFullscreen().catch(() => {});
   const exit  = () => document.exitFullscreen?.().catch(() => {});
   const toggle = () => isFS ? exit() : enter();
+  const exitsOnClick = !CLICK_TO_EXIT_DISABLED_KEYS.has(tool.componentKey);
 
-  const isSelfManaged = isColor || tool.componentKey === 'tipScreen' || tool.componentKey === 'countdownTimer';
+  const isSelfManaged = isColor || tool.componentKey === 'tipScreen' || tool.componentKey === 'countdownTimer' || tool.componentKey === 'deadPixelTest';
   if (isSelfManaged) return <ToolRenderer tool={tool} />;
 
   return (
     <div
       ref={ref}
       className="card"
+      onClick={() => {
+        if (isFS && exitsOnClick) exit();
+      }}
       style={{ overflow: 'hidden', position: 'relative' }}
     >
       <ToolRenderer tool={tool} />
@@ -198,6 +210,21 @@ export function ToolPage() {
       { '@type': 'ListItem', position: category ? 3 : 2, name: tool.name, item: `https://www.whitescreenonline.app/tool/${tool.slug}` },
     ],
   };
+  const webApplicationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: tool.name,
+    description: tool.seoDescription,
+    url: `https://www.whitescreenonline.app/tool/${tool.slug}`,
+    applicationCategory: 'UtilitiesApplication',
+    operatingSystem: 'Any',
+    browserRequirements: 'Requires JavaScript and a modern web browser',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
+  };
 
   return (
     <Layout>
@@ -205,7 +232,7 @@ export function ToolPage() {
         title={tool.seoTitle}
         description={tool.seoDescription}
         canonical={`https://www.whitescreenonline.app/tool/${tool.slug}`}
-        jsonLd={[faqSchema, breadcrumbSchema]}
+        jsonLd={[webApplicationSchema, faqSchema, breadcrumbSchema]}
       />
 
       <div className="wrap" style={{ paddingTop: 28, paddingBottom: 72 }}>

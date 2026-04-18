@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { PageSEO } from '@/src/components/PageSEO';
 import { Layout } from '@/src/components/Layout';
-import { ChevronRight, Clock, Tag } from 'lucide-react';
+import { ChevronRight, Clock } from 'lucide-react';
 import { BLOG_POSTS } from '@/src/data/blog';
 
 function formatDate(iso: string) {

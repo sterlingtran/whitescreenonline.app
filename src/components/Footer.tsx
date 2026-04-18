@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { CATEGORIES } from '@/src/data/tools';
 
 const scrollTop = () => window.scrollTo({ top: 0, behavior: 'auto' });
 
@@ -14,7 +15,7 @@ export function Footer() {
         <span style={{ fontSize: 13, color: 'var(--text-3)' }}>
           &copy; {new Date().getFullYear()} White Screen Online. All rights reserved.
         </span>
-        <nav style={{ display: 'flex', gap: 20, flexWrap: 'wrap' }}>
+        <nav aria-label="Footer links" style={{ display: 'flex', gap: 20, flexWrap: 'wrap' }}>
           {[
             { label: 'About',    href: '/about' },
             { label: 'Blog',     href: '/blog' },
@@ -38,6 +39,20 @@ export function Footer() {
               </Link>
             )
           )}
+        </nav>
+        <nav aria-label="Tool categories" style={{ display: 'flex', gap: 14, flexWrap: 'wrap', flexBasis: '100%', paddingTop: 8 }}>
+          {CATEGORIES.map(category => (
+            <Link
+              key={category.id}
+              to={`/category/${category.slug}`}
+              onClick={scrollTop}
+              style={{ fontSize: 12, color: 'var(--text-3)', transition: 'color 0.15s' }}
+              onMouseEnter={e => (e.currentTarget.style.color = 'var(--text)')}
+              onMouseLeave={e => (e.currentTarget.style.color = 'var(--text-3)')}
+            >
+              {category.name}
+            </Link>
+          ))}
         </nav>
       </div>
     </footer>
