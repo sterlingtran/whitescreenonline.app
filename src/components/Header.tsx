@@ -86,6 +86,7 @@ export function Header() {
               ))}
             </div>
           </div>
+          <Link to="/blog" style={linkStyle('/blog')} onMouseEnter={e => (e.currentTarget.style.color = 'var(--text)')} onMouseLeave={e => (e.currentTarget.style.color = location.pathname.startsWith('/blog') ? 'var(--text)' : 'var(--text-2)')}>Blog</Link>
           <Link to="/favorites" style={linkStyle('/favorites')} onMouseEnter={e => (e.currentTarget.style.color = 'var(--text)')} onMouseLeave={e => (e.currentTarget.style.color = location.pathname === '/favorites' ? 'var(--text)' : 'var(--text-2)')}>Favorites</Link>
         </nav>
 
@@ -107,6 +108,7 @@ export function Header() {
         <div style={{ borderTop: '1px solid var(--border)', background: 'var(--surface)', padding: '12px 20px 16px' }} className="mobile-nav">
           {[
             { label: 'Home', to: '/' },
+            { label: 'Blog', to: '/blog' },
             { label: 'Favorites', to: '/favorites' },
             ...CATEGORIES.map(category => ({
               label: category.name,
