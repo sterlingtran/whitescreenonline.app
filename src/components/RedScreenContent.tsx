@@ -1,4 +1,5 @@
 import React from 'react';
+import { ContentRelatedTools } from './ContentRelatedTools';
 
 const USE_CASES = [
   { title: 'Preserve night vision', desc: 'Astronomers, photographers, and pilots use red to stay dark-adapted' },
@@ -144,6 +145,14 @@ export function RedScreenContent() {
           ))}
         </div>
       </section>
+
+      <ContentRelatedTools tools={[
+        { slug: 'dead-pixel-test', name: 'Dead Pixel Test' },
+        { slug: 'blue-screen',     name: 'Blue Screen' },
+        { slug: 'black-screen',    name: 'Black Screen' },
+        { slug: 'orange-screen',   name: 'Orange Screen' },
+        { slug: 'green-screen',    name: 'Green Screen' },
+      ]} />
     </>
   );
 }

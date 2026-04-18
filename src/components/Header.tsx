@@ -48,7 +48,6 @@ export function Header() {
         <nav style={{ display: 'flex', gap: 28, alignItems: 'center' }} className="desktop-nav">
           <Link to="/" style={linkStyle('/')} onMouseEnter={e => (e.currentTarget.style.color = 'var(--text)')} onMouseLeave={e => (e.currentTarget.style.color = location.pathname === '/' ? 'var(--text)' : 'var(--text-2)')}>Home</Link>
           <Link to="/favorites" style={linkStyle('/favorites')} onMouseEnter={e => (e.currentTarget.style.color = 'var(--text)')} onMouseLeave={e => (e.currentTarget.style.color = location.pathname === '/favorites' ? 'var(--text)' : 'var(--text-2)')}>Favorites</Link>
-          <a href="mailto:hello@whitescreenonline.app" style={{ fontSize: 14, color: 'var(--text-2)', transition: 'color 0.15s' }} onMouseEnter={e => (e.currentTarget.style.color = 'var(--text)')} onMouseLeave={e => (e.currentTarget.style.color = 'var(--text-2)')}>Contact</a>
         </nav>
 
         {/* Mobile hamburger */}
@@ -80,13 +79,6 @@ export function Header() {
               {label}
             </Link>
           ))}
-          <a
-            href="mailto:hello@whitescreenonline.app"
-            style={{ display: 'block', paddingTop: 10, fontSize: 15, color: 'var(--text-2)' }}
-            onClick={() => setOpen(false)}
-          >
-            Contact
-          </a>
         </div>
       )}
 

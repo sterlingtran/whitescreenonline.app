@@ -1,4 +1,5 @@
 import React from 'react';
+import { ContentRelatedTools } from './ContentRelatedTools';
 
 const USE_CASES = [
   { title: 'Reduce eye strain', desc: 'Warm yellow light is easier on eyes than white or blue light' },
@@ -144,6 +145,13 @@ export function YellowScreenContent() {
           ))}
         </div>
       </section>
+
+      <ContentRelatedTools tools={[
+        { slug: 'white-screen',  name: 'White Screen' },
+        { slug: 'orange-screen', name: 'Orange Screen' },
+        { slug: 'dead-pixel-test', name: 'Dead Pixel Test' },
+        { slug: 'black-screen',  name: 'Black Screen' },
+      ]} />
     </>
   );
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { ContentRelatedTools } from './ContentRelatedTools';
 
 const USE_CASES = [
   { title: 'Flattering beauty lighting', desc: 'Softens skin tones for makeup application and selfies' },
@@ -144,6 +145,13 @@ export function PinkScreenContent() {
           ))}
         </div>
       </section>
+
+      <ContentRelatedTools tools={[
+        { slug: 'purple-screen',       name: 'Purple Screen' },
+        { slug: 'orange-screen',       name: 'Orange Screen' },
+        { slug: 'white-screen',        name: 'White Screen' },
+        { slug: 'custom-color-screen', name: 'Custom Color Screen' },
+      ]} />
     </>
   );
 }

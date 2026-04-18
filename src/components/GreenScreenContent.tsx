@@ -1,4 +1,5 @@
 import React from 'react';
+import { ContentRelatedTools } from './ContentRelatedTools';
 
 const USE_CASES = [
   { title: 'Video background removal', desc: 'Industry-standard chroma keying for YouTube, TikTok, and film production' },
@@ -144,6 +145,14 @@ export function GreenScreenContent() {
           ))}
         </div>
       </section>
+
+      <ContentRelatedTools tools={[
+        { slug: 'blue-screen',         name: 'Blue Screen' },
+        { slug: 'red-screen',          name: 'Red Screen' },
+        { slug: 'dead-pixel-test',     name: 'Dead Pixel Test' },
+        { slug: 'custom-color-screen', name: 'Custom Color Screen' },
+        { slug: 'white-screen',        name: 'White Screen' },
+      ]} />
     </>
   );
 }

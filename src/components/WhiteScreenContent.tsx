@@ -1,4 +1,5 @@
 import React from 'react';
+import { ContentRelatedTools } from './ContentRelatedTools';
 
 const USE_CASES = [
   { title: 'Find dead pixels', desc: 'Spot black dots and stuck pixels on any monitor or phone screen' },
@@ -144,6 +145,14 @@ export function WhiteScreenContent() {
           ))}
         </div>
       </section>
+
+      <ContentRelatedTools tools={[
+        { slug: 'dead-pixel-test',    name: 'Dead Pixel Test' },
+        { slug: 'black-screen',       name: 'Black Screen' },
+        { slug: 'custom-color-screen',name: 'Custom Color Screen' },
+        { slug: 'blue-screen',        name: 'Blue Screen' },
+        { slug: 'red-screen',         name: 'Red Screen' },
+      ]} />
     </>
   );
 }

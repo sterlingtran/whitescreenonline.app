@@ -1,4 +1,5 @@
 import React from 'react';
+import { ContentRelatedTools } from './ContentRelatedTools';
 
 const USE_CASES = [
   { title: 'Streaming backgrounds', desc: 'Popular Twitch and YouTube aesthetic for gaming and content setups' },
@@ -144,6 +145,13 @@ export function PurpleScreenContent() {
           ))}
         </div>
       </section>
+
+      <ContentRelatedTools tools={[
+        { slug: 'blue-screen',         name: 'Blue Screen' },
+        { slug: 'pink-screen',         name: 'Pink Screen' },
+        { slug: 'dead-pixel-test',     name: 'Dead Pixel Test' },
+        { slug: 'custom-color-screen', name: 'Custom Color Screen' },
+      ]} />
     </>
   );
 }

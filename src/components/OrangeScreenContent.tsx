@@ -1,4 +1,5 @@
 import React from 'react';
+import { ContentRelatedTools } from './ContentRelatedTools';
 
 const USE_CASES = [
   { title: 'Maximum sleep protection', desc: 'Warmer than yellow, nearly as effective as red for melatonin preservation' },
@@ -144,6 +145,13 @@ export function OrangeScreenContent() {
           ))}
         </div>
       </section>
+
+      <ContentRelatedTools tools={[
+        { slug: 'red-screen',    name: 'Red Screen' },
+        { slug: 'yellow-screen', name: 'Yellow Screen' },
+        { slug: 'dead-pixel-test', name: 'Dead Pixel Test' },
+        { slug: 'pink-screen',   name: 'Pink Screen' },
+      ]} />
     </>
   );
 }

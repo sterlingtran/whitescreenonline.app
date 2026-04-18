@@ -1,4 +1,5 @@
 import React from 'react';
+import { ContentRelatedTools } from './ContentRelatedTools';
 
 const USE_CASES = [
   { title: 'Find stuck pixels', desc: 'Bright colored dots reveal pixels that refuse to turn off' },
@@ -144,6 +145,14 @@ export function BlackScreenContent() {
           ))}
         </div>
       </section>
+
+      <ContentRelatedTools tools={[
+        { slug: 'white-screen',    name: 'White Screen' },
+        { slug: 'dead-pixel-test', name: 'Dead Pixel Test' },
+        { slug: 'red-screen',      name: 'Red Screen' },
+        { slug: 'blue-screen',     name: 'Blue Screen' },
+        { slug: 'green-screen',    name: 'Green Screen' },
+      ]} />
     </>
   );
 }
