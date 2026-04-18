@@ -27,3 +27,4 @@ export function render(url: string) {
 
 // Export route data so prerender.js can build the URL list
 export { TOOLS, CATEGORIES } from './src/data/tools';
+export { BLOG_POSTS } from './src/data/blog';

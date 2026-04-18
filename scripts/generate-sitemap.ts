@@ -7,6 +7,7 @@
 
 import { writeFileSync, existsSync } from 'fs';
 import { TOOLS, CATEGORIES } from '../src/data/tools';
+import { BLOG_POSTS } from '../src/data/blog';
 
 const BASE_URL = 'https://www.whitescreenonline.app';
 const today = new Date().toISOString().split('T')[0];
@@ -47,6 +48,14 @@ const urls: UrlEntry[] = [
   ...TOOLS.map(tool => ({
     loc:        `${BASE_URL}/tool/${tool.slug}`,
     priority:   TOOL_PRIORITY_OVERRIDE[tool.slug] ?? PRIORITY[tool.category] ?? '0.7',
+    changefreq: 'monthly',
+  })),
+
+  // Blog index + posts
+  { loc: `${BASE_URL}/blog`,           priority: '0.7', changefreq: 'monthly' },
+  ...BLOG_POSTS.map(p => ({
+    loc:        `${BASE_URL}/blog/${p.slug}`,
+    priority:   '0.7',
     changefreq: 'monthly',
   })),
 

@@ -7,6 +7,8 @@ import { ToolPage } from '@/src/pages/ToolPage';
 import { CategoryPage } from '@/src/pages/CategoryPage';
 import { Favorites } from '@/src/pages/Favorites';
 import { About } from '@/src/pages/About';
+import { Blog } from '@/src/pages/Blog';
+import { BlogPost } from '@/src/pages/BlogPost';
 import { PrivacyPolicy } from '@/src/pages/PrivacyPolicy';
 import { Terms } from '@/src/pages/Terms';
 import { NotFound } from '@/src/pages/NotFound';
@@ -21,6 +23,8 @@ export function AppRoutes() {
         <Route path="/category/:categorySlug" element={<CategoryPage />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/about" element={<About />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="*" element={<NotFound />} />

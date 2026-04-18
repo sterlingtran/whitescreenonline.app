@@ -19,13 +19,15 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 console.log('Prerendering routes...');
 
-const { render, TOOLS, CATEGORIES } = await import('./dist/server/entry-server.js');
+const { render, TOOLS, CATEGORIES, BLOG_POSTS } = await import('./dist/server/entry-server.js');
 
 const routes = [
   '/',
   ...CATEGORIES.map((c) => `/category/${c.slug}`),
   ...TOOLS.map((t) => `/tool/${t.slug}`),
   '/about',
+  '/blog',
+  ...BLOG_POSTS.map((p) => `/blog/${p.slug}`),
   '/privacy-policy',
   '/terms',
 ];
