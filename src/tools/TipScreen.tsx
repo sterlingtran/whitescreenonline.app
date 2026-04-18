@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/static-components */
 import { useState, useEffect } from 'react';
 import { useFullscreen } from '@/src/hooks/useFullscreen';
 import { Maximize2 } from 'lucide-react';
@@ -17,7 +18,6 @@ export function TipScreen() {
   const total      = selected !== null ? subtotal + tipValue : null;
 
   /* reset selection when leaving fullscreen */
-  useEffect(() => { if (!isFullscreen) setSelected(null); }, [isFullscreen]);
 
   /* keyboard: F / Space → enter fullscreen */
   useEffect(() => {

@@ -17,7 +17,7 @@ const HOW_IT_WORKS = [
   'Activate the yellow screen at 40–60% brightness for comfortable reading',
   'Press the Fullscreen button (or F11) for distraction-free coverage',
   'Use for reading, writing, or long work sessions — yellow mimics paper',
-  'Press ESC or click anywhere outside to exit',
+  'Press ESC or use the Fullscreen button to exit',
 ];
 
 const IN_DEPTH = [

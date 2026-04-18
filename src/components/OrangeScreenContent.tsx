@@ -17,7 +17,7 @@ const HOW_IT_WORKS = [
   'Activate the orange screen 1–2 hours before bedtime',
   'Set brightness to 30–50% for reading or 20–40% for ambient lighting',
   'Orange simulates sunset, signaling your body to begin winding down',
-  'Press ESC or click anywhere outside to exit',
+  'Press ESC or use the Fullscreen button to exit',
 ];
 
 const IN_DEPTH = [

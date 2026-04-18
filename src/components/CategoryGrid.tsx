@@ -14,7 +14,8 @@ export function CategoryGrid({ categories, showFeaturedTools = true }: CategoryG
     <div className="space-y-12">
       {categories.map((category) => {
         const categoryTools = TOOLS.filter((tool) => tool.category === category.id).slice(0, 4);
-        const IconComponent = (LucideIcons as any)[category.icon] as LucideIcon | undefined;
+        const iconComponents = LucideIcons as unknown as Record<string, LucideIcon>;
+        const IconComponent = iconComponents[category.icon];
 
         return (
           <div key={category.id}>

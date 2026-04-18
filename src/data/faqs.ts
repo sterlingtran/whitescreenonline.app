@@ -196,7 +196,7 @@ export const TOOL_FAQS: Record<string, FAQ[]> = {
   ],
   'bsod': [
     { q: 'What is the Blue Screen of Death prank?', a: 'The BSOD simulator recreates the authentic Windows Blue Screen of Death error screen, complete with error codes and system information, designed as a harmless prank for friends and coworkers.' },
-    { q: 'How do I exit the BSOD screen?', a: 'Press Escape or click anywhere on the screen to exit. The prank is completely safe and makes no changes to your computer.' },
+    { q: 'How do I exit the BSOD screen?', a: 'Press Escape to exit. The prank is completely safe and makes no changes to your computer.' },
     { q: 'Can I customize the error code?', a: 'Yes. Enter any stop code or error message you want in the Error Code field before launching the prank screen.' },
     { q: 'Will this actually break my computer?', a: 'No. This is a purely visual simulation running in your browser. It cannot affect your operating system, hardware, or files in any way.' },
   ],

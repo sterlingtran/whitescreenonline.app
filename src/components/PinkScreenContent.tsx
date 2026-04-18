@@ -17,7 +17,7 @@ const HOW_IT_WORKS = [
   'Position the screen 2–4 feet from your face at eye level for beauty lighting',
   'Set brightness to 40–70% for soft, flattering fill light',
   'For ambiance, reduce to 20–40% to create a gentle, romantic atmosphere',
-  'Press ESC or click anywhere outside to exit',
+  'Press ESC or use the Fullscreen button to exit',
 ];
 
 const IN_DEPTH = [

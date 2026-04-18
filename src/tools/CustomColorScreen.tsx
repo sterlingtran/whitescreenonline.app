@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { useFullscreen } from '@/src/hooks/useFullscreen';
 import { Maximize2, Copy, Download, Check } from 'lucide-react';
 

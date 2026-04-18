@@ -17,7 +17,7 @@ const HOW_IT_WORKS = [
   'Click the blue screen preview to activate it',
   'Press the Fullscreen button (or F11 on desktop) for full coverage',
   'Adjust brightness to find stuck pixels or set the right lighting mood',
-  'Press ESC or click anywhere outside to exit',
+  'Press ESC or use the Fullscreen button to exit',
 ];
 
 const IN_DEPTH = [

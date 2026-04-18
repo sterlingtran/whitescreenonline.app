@@ -12,7 +12,7 @@ export function Footer() {
     }}>
       <div className="wrap" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
         <span style={{ fontSize: 13, color: 'var(--text-3)' }}>
-          © {new Date().getFullYear()} White Screen Online. All rights reserved.
+          &copy; {new Date().getFullYear()} White Screen Online. All rights reserved.
         </span>
         <nav style={{ display: 'flex', gap: 20, flexWrap: 'wrap' }}>
           {[

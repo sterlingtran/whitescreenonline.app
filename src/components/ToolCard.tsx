@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Tool } from '@/src/data/tools';
 
 interface ToolCardProps {
@@ -443,13 +443,19 @@ function MiniPreview({ slug }: { slug: string }) {
 
 /* ── Component ───────────────────────────────────────── */
 export function ToolCard({ tool, variant = 'compact' }: ToolCardProps) {
+  const navigate = useNavigate();
+  const openTool = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    navigate(`/tool/${tool.slug}`);
+    scrollTop();
+  };
 
   /* Landscape variant — mini visual preview + name below */
   if (variant === 'landscape') {
     return (
       <Link
         to={`/tool/${tool.slug}`}
-        onClick={scrollTop}
+        onClick={openTool}
         className="landscape-card"
       >
         <div className="landscape-thumb">
@@ -468,7 +474,7 @@ export function ToolCard({ tool, variant = 'compact' }: ToolCardProps) {
   return (
     <Link
       to={`/tool/${tool.slug}`}
-      onClick={scrollTop}
+      onClick={openTool}
       className="tool-card"
       style={{ backgroundColor: bg }}
     >

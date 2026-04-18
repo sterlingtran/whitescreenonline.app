@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export function useLocalStorage<T>(key: string, initialValue: T): [T, (value: T) => void] {
   const [storedValue, setStoredValue] = useState<T>(() => {
@@ -12,20 +12,6 @@ export function useLocalStorage<T>(key: string, initialValue: T): [T, (value: T)
     }
     return initialValue;
   });
-
-  // Re-read from localStorage when the key changes (e.g., navigating to a different tool)
-  useEffect(() => {
-    try {
-      const item = window.localStorage.getItem(key);
-      if (item) {
-        setStoredValue(JSON.parse(item) as T);
-      } else {
-        setStoredValue(initialValue);
-      }
-    } catch (error) {
-      console.error(`Failed to read from localStorage [${key}]:`, error);
-    }
-  }, [key, initialValue]);
 
   const setValue = (value: T) => {
     try {

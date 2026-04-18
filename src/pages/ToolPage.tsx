@@ -1,5 +1,5 @@
-import { useRef, useEffect, useMemo, useState } from 'react';
-import { useParams, useNavigate, Link, useSearchParams } from 'react-router-dom';
+import { useRef, useEffect, useMemo, useState, type ComponentType } from 'react';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { ChevronRight, Maximize2 } from 'lucide-react';
 import { getTool, getRelatedTools, CATEGORIES, TOOLS } from '@/src/data/tools';
 import { getFAQs } from '@/src/data/faqs';
@@ -33,7 +33,7 @@ function ToolRenderer({ tool }: { tool: NonNullable<ReturnType<typeof getTool>> 
   if (tool.componentKey === 'tipScreen')        return <TipScreen />;
   if (tool.componentKey === 'countdownTimer')   return <CountdownTimer />;
 
-  const map: Record<string, React.ComponentType<any>> = {
+  const map: Record<string, ComponentType> = {
     customColorScreen:     CustomColorScreen,
     deadPixelTest:         DeadPixelTest,
     zoomLighting:          Placeholders.ZoomLighting,
@@ -72,10 +72,6 @@ function ToolWithFullscreen({ tool }: { tool: NonNullable<ReturnType<typeof getT
   const isColor = tool.componentKey === 'colorScreen';
 
   // Tools that manage their own fullscreen — render directly without wrapper
-  const isSelfManaged = isColor || tool.componentKey === 'tipScreen' || tool.componentKey === 'countdownTimer';
-  if (isSelfManaged) return <ToolRenderer tool={tool} />;
-
-  // Other tools: wrap with a fullscreen container + hover button
   const ref = useRef<HTMLDivElement>(null);
   const [isFS, setIsFS] = useState(false);
 
@@ -88,6 +84,9 @@ function ToolWithFullscreen({ tool }: { tool: NonNullable<ReturnType<typeof getT
   const enter = () => ref.current?.requestFullscreen().catch(() => {});
   const exit  = () => document.exitFullscreen?.().catch(() => {});
   const toggle = () => isFS ? exit() : enter();
+
+  const isSelfManaged = isColor || tool.componentKey === 'tipScreen' || tool.componentKey === 'countdownTimer';
+  if (isSelfManaged) return <ToolRenderer tool={tool} />;
 
   return (
     <div
@@ -133,8 +132,6 @@ function ToolWithFullscreen({ tool }: { tool: NonNullable<ReturnType<typeof getT
 export function ToolPage() {
   const { toolSlug } = useParams<{ toolSlug: string }>();
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
-  const autoFS = searchParams.get('fs') === '1';
 
   const tool = getTool(toolSlug!);
   const related = getRelatedTools(toolSlug!);
@@ -209,7 +206,7 @@ export function ToolPage() {
         </div>
 
         {/* Tool */}
-        <ToolWithFullscreen tool={tool} />
+        <ToolWithFullscreen key={tool.slug} tool={tool} />
 
         {/* Other Tools grid */}
         <section style={{ marginTop: 52 }}>

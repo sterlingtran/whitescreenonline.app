@@ -51,6 +51,24 @@ export function CountdownTimer() {
   const setM = (v: number) => { setIm(v); syncFromInputs(ih, v, is); };
   const setS = (v: number) => { setIs(v); syncFromInputs(ih, im, v); };
 
+  const beep = useCallback(() => {
+    try {
+      const ctx = new AudioContext();
+      [0, 0.35, 0.7].forEach(offset => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain); gain.connect(ctx.destination);
+        osc.type = 'sine'; osc.frequency.value = 880;
+        gain.gain.setValueAtTime(0.35, ctx.currentTime + offset);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + offset + 0.3);
+        osc.start(ctx.currentTime + offset);
+        osc.stop(ctx.currentTime + offset + 0.31);
+      });
+    } catch (error) {
+      console.error('Failed to play timer alert:', error);
+    }
+  }, []);
+
   /* ── Tick ── */
   useEffect(() => {
     if (running) {
@@ -69,7 +87,7 @@ export function CountdownTimer() {
       if (tickRef.current) clearInterval(tickRef.current);
     }
     return () => { if (tickRef.current) clearInterval(tickRef.current); };
-  }, [running]);
+  }, [running, beep]);
 
   /* ── Controls ── */
   const handleStart = useCallback(() => {
@@ -95,7 +113,11 @@ export function CountdownTimer() {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (['INPUT','TEXTAREA','SELECT'].includes((e.target as HTMLElement)?.tagName)) return;
-      if (e.key === ' ')                        { e.preventDefault(); running ? handlePause() : handleStart(); }
+      if (e.key === ' ') {
+        e.preventDefault();
+        if (running) handlePause();
+        else handleStart();
+      }
       if (e.key === 'r' || e.key === 'R')       { handleReset(); }
       if ((e.key === 'f' || e.key === 'F') && !isFullscreen) { e.preventDefault(); enter(); }
     };
@@ -104,22 +126,6 @@ export function CountdownTimer() {
   }, [running, isFullscreen, handleStart, handlePause, handleReset, enter]);
 
   /* ── Alert sound ── */
-  const beep = () => {
-    try {
-      const ctx = new AudioContext();
-      [0, 0.35, 0.7].forEach(offset => {
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-        osc.connect(gain); gain.connect(ctx.destination);
-        osc.type = 'sine'; osc.frequency.value = 880;
-        gain.gain.setValueAtTime(0.35, ctx.currentTime + offset);
-        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + offset + 0.3);
-        osc.start(ctx.currentTime + offset);
-        osc.stop(ctx.currentTime + offset + 0.31);
-      });
-    } catch {}
-  };
-
   /* ── Derived ── */
   const progress = totalSec > 0 ? remaining / totalSec : 0;
   const timeStr  = fmtSec(remaining);

@@ -9,6 +9,17 @@ interface ToolPlaceholderProps {
   previewColor?: string;
 }
 
+const MOTIVATIONAL_QUOTES = [
+  'The only way to do great work is to love what you do. - Steve Jobs',
+  'Innovation distinguishes between a leader and a follower. - Steve Jobs',
+  'Life is what happens when you are busy making other plans. - John Lennon',
+  'The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt',
+  'It is during our darkest moments that we must focus to see the light. - Aristotle',
+  'The way to get started is to quit talking and begin doing. - Walt Disney',
+  'Do not watch the clock; do what it does. Keep going. - Sam Levenson',
+  'The best time to plant a tree was 20 years ago. The second best time is now.',
+];
+
 export function ToolPlaceholder({ toolId, controls, previewColor = '#3B82F6' }: ToolPlaceholderProps) {
   const { settings, updateSetting } = useToolSettings<Record<string, unknown>>(toolId, {});
 
@@ -78,8 +89,15 @@ export function ZoomLighting() {
     let animationFrame = 0;
     let cancelled = false;
 
-    canvas.width = canvas.offsetWidth;
-    canvas.height = canvas.offsetHeight;
+    const resizeCanvas = () => {
+      const width = canvas.offsetWidth || canvas.clientWidth || 960;
+      const height = canvas.offsetHeight || canvas.clientHeight || Math.round(width * 9 / 16);
+      canvas.width = width;
+      canvas.height = height;
+    };
+
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
 
     const animate = () => {
       if (cancelled) return;
@@ -105,6 +123,7 @@ export function ZoomLighting() {
 
     return () => {
       cancelled = true;
+      window.removeEventListener('resize', resizeCanvas);
       cancelAnimationFrame(animationFrame);
     };
   }, [settings.brightness, settings.zoom]);
@@ -190,8 +209,15 @@ export function RGBGradient() {
     let animationFrame = 0;
     let cancelled = false;
 
-    canvas.width = canvas.offsetWidth;
-    canvas.height = canvas.offsetHeight;
+    const resizeCanvas = () => {
+      const width = canvas.offsetWidth || canvas.clientWidth || 960;
+      const height = canvas.offsetHeight || canvas.clientHeight || Math.round(width * 9 / 16);
+      canvas.width = width;
+      canvas.height = height;
+    };
+
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
 
     const animate = () => {
       if (cancelled) return;
@@ -217,6 +243,7 @@ export function RGBGradient() {
 
     return () => {
       cancelled = true;
+      window.removeEventListener('resize', resizeCanvas);
       cancelAnimationFrame(animationFrame);
     };
   }, []);
@@ -314,8 +341,15 @@ export function RadarScreen() {
     let animationFrame = 0;
     let cancelled = false;
 
-    canvas.width = canvas.offsetWidth;
-    canvas.height = canvas.offsetHeight;
+    const resizeCanvas = () => {
+      const width = canvas.offsetWidth || canvas.clientWidth || 960;
+      const height = canvas.offsetHeight || canvas.clientHeight || Math.round(width * 9 / 16);
+      canvas.width = width;
+      canvas.height = height;
+    };
+
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
 
     const animate = () => {
       if (cancelled) return;
@@ -361,6 +395,7 @@ export function RadarScreen() {
 
     return () => {
       cancelled = true;
+      window.removeEventListener('resize', resizeCanvas);
       cancelAnimationFrame(animationFrame);
     };
   }, []);
@@ -556,22 +591,11 @@ export function FlipClock() {
 
 // Motivational Quote
 export function MotivationalQuote() {
-  const quotes = [
-    'The only way to do great work is to love what you do. - Steve Jobs',
-    'Innovation distinguishes between a leader and a follower. - Steve Jobs',
-    'Life is what happens when you are busy making other plans. - John Lennon',
-    'The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt',
-    'It is during our darkest moments that we must focus to see the light. - Aristotle',
-    'The way to get started is to quit talking and begin doing. - Walt Disney',
-    'Do not watch the clock; do what it does. Keep going. - Sam Levenson',
-    'The best time to plant a tree was 20 years ago. The second best time is now.',
-  ];
-
-  const [quote, setQuote] = useState(quotes[0]);
+  const [quote, setQuote] = useState(MOTIVATIONAL_QUOTES[0]);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setQuote(quotes[Math.floor(Math.random() * quotes.length)]);
+      setQuote(MOTIVATIONAL_QUOTES[Math.floor(Math.random() * MOTIVATIONAL_QUOTES.length)]);
     }, 5000);
     return () => clearInterval(interval);
   }, []);
@@ -915,6 +939,7 @@ export function HIITTimer() {
   useEffect(() => {
     if (!isRunning || timeLeft > 0) return;
     const next = phase === 'prep' ? 'work' : phase === 'work' ? 'rest' : 'work';
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setPhase(next);
     setTimeLeft(next === 'work' ? workSec : restSec);
   }, [timeLeft, isRunning, phase, workSec, restSec]);
@@ -1244,6 +1269,14 @@ export function ProductivityDashboard() {
   const [todos, setTodos] = useState<string[]>([]);
   const [input, setInput] = useState('');
   const { settings, updateSetting } = useToolSettings('productivity-dashboard', { elapsedSeconds: 0 });
+  const elapsedSeconds = settings.elapsedSeconds as number;
+
+  const addTask = () => {
+    const trimmed = input.trim();
+    if (!trimmed) return;
+    setTodos((current) => [...current, trimmed]);
+    setInput('');
+  };
 
   return (
     <div className="w-full aspect-video bg-gradient-to-br from-orange-50 to-pink-50 dark:from-orange-900 dark:to-pink-900 rounded-lg p-8 flex flex-col">
@@ -1254,13 +1287,31 @@ export function ProductivityDashboard() {
         <div className="bg-white dark:bg-gray-800 rounded-lg p-6">
           <p className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-2">Focus Time</p>
           <p className="text-4xl font-bold text-blue-600 dark:text-blue-400">
-            {Math.floor((settings.elapsedSeconds as number) / 60)}:{String((settings.elapsedSeconds as number) % 60).padStart(2, '0')}
+            {Math.floor(elapsedSeconds / 60)}:{String(elapsedSeconds % 60).padStart(2, '0')}
           </p>
+          <button
+            onClick={() => updateSetting('elapsedSeconds', elapsedSeconds + 60)}
+            className="mt-4 rounded-lg bg-blue-600 px-3 py-2 text-sm font-semibold text-white"
+          >
+            Add 1 minute
+          </button>
         </div>
 
         {/* To-Do List */}
         <div className="bg-white dark:bg-gray-800 rounded-lg p-6 flex flex-col">
           <p className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-4">Tasks</p>
+          <div className="mb-3 flex gap-2">
+            <input
+              value={input}
+              onChange={(event) => setInput(event.target.value)}
+              onKeyDown={(event) => { if (event.key === 'Enter') addTask(); }}
+              className="min-w-0 flex-1 rounded border border-gray-300 px-2 py-1 text-sm dark:border-gray-600 dark:bg-gray-900 dark:text-white"
+              placeholder="Add task"
+            />
+            <button onClick={addTask} className="rounded bg-gray-900 px-3 py-1 text-sm font-semibold text-white dark:bg-white dark:text-gray-900">
+              Add
+            </button>
+          </div>
           <div className="flex-1 space-y-2 overflow-y-auto">
             {todos.map((todo, i) => (
               <div key={i} className="text-sm text-gray-700 dark:text-gray-300 flex justify-between">
