@@ -6,6 +6,7 @@ export function Header() {
   const location = useLocation();
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
+  const [categoriesOpen, setCategoriesOpen] = useState(false);
 
   const linkStyle = (path: string): React.CSSProperties => ({
     fontSize: 14,
@@ -19,6 +20,7 @@ export function Header() {
   const goHome = async (event?: React.MouseEvent<HTMLAnchorElement>) => {
     event?.preventDefault();
     setOpen(false);
+    setCategoriesOpen(false);
 
     if (document.fullscreenElement) {
       await document.exitFullscreen().catch(() => undefined);
@@ -52,6 +54,10 @@ export function Header() {
           <Link to="/" style={linkStyle('/')} onMouseEnter={e => (e.currentTarget.style.color = 'var(--text)')} onMouseLeave={e => (e.currentTarget.style.color = location.pathname === '/' ? 'var(--text)' : 'var(--text-2)')}>Home</Link>
           <div className="category-menu" style={{ position: 'relative' }}>
             <button
+              type="button"
+              aria-expanded={categoriesOpen}
+              aria-haspopup="true"
+              onClick={() => setCategoriesOpen(current => !current)}
               style={{
                 fontSize: 14,
                 color: categoryActive ? 'var(--text)' : 'var(--text-2)',
@@ -67,12 +73,13 @@ export function Header() {
             >
               Categories
             </button>
-            <div className="category-dropdown">
+            <div className={`category-dropdown ${categoriesOpen ? 'is-open' : ''}`}>
               {CATEGORIES.map(category => (
                 <Link
                   key={category.id}
                   to={`/category/${category.slug}`}
                   className="category-dropdown-link"
+                  onClick={() => setCategoriesOpen(false)}
                 >
                   {category.name}
                 </Link>
@@ -121,7 +128,7 @@ export function Header() {
       <style>{`
         .category-dropdown {
           position: absolute;
-          top: calc(100% + 14px);
+          top: calc(100% + 8px);
           right: 50%;
           transform: translateX(50%) translateY(-4px);
           width: 230px;
@@ -135,8 +142,18 @@ export function Header() {
           transition: opacity 0.15s, transform 0.15s;
         }
 
+        .category-menu::after {
+          content: '';
+          position: absolute;
+          left: -12px;
+          right: -12px;
+          top: 100%;
+          height: 14px;
+        }
+
         .category-menu:hover .category-dropdown,
-        .category-menu:focus-within .category-dropdown {
+        .category-menu:focus-within .category-dropdown,
+        .category-dropdown.is-open {
           opacity: 1;
           pointer-events: auto;
           transform: translateX(50%) translateY(0);
