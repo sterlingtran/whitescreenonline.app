@@ -29,7 +29,7 @@ export function Home() {
   return (
     <Layout>
       <PageSEO
-        title="White Screen Tool — Free Full-Screen Color Display"
+        title="White Screen Online - Free Monitor Test & Color Display Tools"
         description="Free white screen tool for monitor cleaning, dead pixel detection, photography lighting, and display testing. 30+ color screens, 480p to 8K download. No login."
         canonical="https://whitescreenonline.app/"
         jsonLd={[
