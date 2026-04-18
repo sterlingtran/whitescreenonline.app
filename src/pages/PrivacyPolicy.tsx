@@ -43,7 +43,7 @@ export function PrivacyPolicy() {
         </p>
 
         <p style={sx.p}>
-          White Screen Online ("we", "us", "our") is operated by Sterling Tran, an independent developer based in Canada.
+          White Screen Online ("we", "us", "our") is operated by an independent developer based in Canada.
           This privacy policy explains what personal information we collect, how we use it, and what rights you have
           over it. We are committed to protecting your privacy and complying with applicable privacy laws, including
           Canada's <em>Personal Information Protection and Electronic Documents Act</em> (PIPEDA) and, where applicable,
@@ -175,7 +175,6 @@ export function PrivacyPolicy() {
           For privacy inquiries, data access requests, or to withdraw consent:
         </p>
         <p style={{ ...sx.p, marginBottom: 0 }}>
-          <strong>Sterling Tran</strong><br />
           White Screen Online<br />
           Canada<br />
           <a href="mailto:hello@whitescreenonline.app" style={{ color: 'var(--text)' }}>

@@ -53,7 +53,7 @@ export function About() {
         <section style={{ marginBottom: 40 }}>
           <h2 style={sx.h2}>Who built it?</h2>
           <p style={sx.p}>
-            White Screen Online is an independent project built and maintained by Sterling Tran, a developer based in Canada.
+            White Screen Online is an independent project built and maintained by a developer based in Canada.
             It is not a product of a large company — it is a solo-built utility site maintained because the tools are genuinely useful
             and because building a fast, ad-light, no-login utility site is the right way to serve people who just need something to work.
           </p>
