@@ -27,6 +27,25 @@ import { FocusScreenContent } from '@/src/components/FocusScreenContent';
 import { MeditationBreatherContent } from '@/src/components/MeditationBreatherContent';
 import { RingLightContent } from '@/src/components/RingLightContent';
 import { RGBGradientContent } from '@/src/components/RGBGradientContent';
+import { TipScreenContent } from '@/src/components/TipScreenContent';
+import { WhiteNoiseContent } from '@/src/components/WhiteNoiseContent';
+import { BrokenScreenContent } from '@/src/components/BrokenScreenContent';
+import { RadarScreenContent } from '@/src/components/RadarScreenContent';
+import { BSODContent } from '@/src/components/BSODContent';
+import { HackerTyperContent } from '@/src/components/HackerTyperContent';
+import { DVDScreensaverContent } from '@/src/components/DVDScreensaverContent';
+import { FlipClockContent } from '@/src/components/FlipClockContent';
+import { MotivationalQuoteContent } from '@/src/components/MotivationalQuoteContent';
+import { SMPTEColorBarsContent } from '@/src/components/SMPTEColorBarsContent';
+import { MatrixScreensaverContent } from '@/src/components/MatrixScreensaverContent';
+import { StarfieldContent } from '@/src/components/StarfieldContent';
+import { RainAmbientContent } from '@/src/components/RainAmbientContent';
+import { ParticleSystemContent } from '@/src/components/ParticleSystemContent';
+import { Windows10UpdateContent } from '@/src/components/Windows10UpdateContent';
+import { WindowsXPUpdateContent } from '@/src/components/WindowsXPUpdateContent';
+import { MacOSUpdateContent } from '@/src/components/MacOSUpdateContent';
+import { UbuntuUpdateContent } from '@/src/components/UbuntuUpdateContent';
+import { ChromeOSUpdateContent } from '@/src/components/ChromeOSUpdateContent';
 import { ColorScreen } from '@/src/tools/ColorScreen';
 import { CustomColorScreen } from '@/src/tools/CustomColorScreen';
 import { DeadPixelTest } from '@/src/tools/DeadPixelTest';
@@ -274,6 +293,44 @@ export function ToolPage() {
           <RingLightContent />
         ) : tool.slug === 'rgb-gradient' ? (
           <RGBGradientContent />
+        ) : tool.slug === 'tip-screen' ? (
+          <TipScreenContent />
+        ) : tool.slug === 'white-noise' ? (
+          <WhiteNoiseContent />
+        ) : tool.slug === 'broken-screen' ? (
+          <BrokenScreenContent />
+        ) : tool.slug === 'radar-screen' ? (
+          <RadarScreenContent />
+        ) : tool.slug === 'bsod' ? (
+          <BSODContent />
+        ) : tool.slug === 'hacker-typer' ? (
+          <HackerTyperContent />
+        ) : tool.slug === 'dvd-screensaver' ? (
+          <DVDScreensaverContent />
+        ) : tool.slug === 'flip-clock' ? (
+          <FlipClockContent />
+        ) : tool.slug === 'motivational-quote' ? (
+          <MotivationalQuoteContent />
+        ) : tool.slug === 'smpte-color-bars' ? (
+          <SMPTEColorBarsContent />
+        ) : tool.slug === 'matrix-screensaver' ? (
+          <MatrixScreensaverContent />
+        ) : tool.slug === 'starfield-screensaver' ? (
+          <StarfieldContent />
+        ) : tool.slug === 'rain-ambient' ? (
+          <RainAmbientContent />
+        ) : tool.slug === 'particle-system' ? (
+          <ParticleSystemContent />
+        ) : tool.slug === 'windows-10-update' ? (
+          <Windows10UpdateContent />
+        ) : tool.slug === 'windows-xp-update' ? (
+          <WindowsXPUpdateContent />
+        ) : tool.slug === 'macos-update' ? (
+          <MacOSUpdateContent />
+        ) : tool.slug === 'ubuntu-update' ? (
+          <UbuntuUpdateContent />
+        ) : tool.slug === 'chromeos-update' ? (
+          <ChromeOSUpdateContent />
         ) : (
           <section style={{ marginBottom: 36 }}>
             <h2 className="h2" style={{ marginBottom: 10 }}>About {tool.name}</h2>
