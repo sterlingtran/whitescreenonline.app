@@ -6,4 +6,4 @@ Disallow: /admin/
 Disallow: /private/
 
 # Sitemap location
-Sitemap: https://screenhub.app/sitemap.xml
+Sitemap: https://whitescreenonline.app/sitemap.xml

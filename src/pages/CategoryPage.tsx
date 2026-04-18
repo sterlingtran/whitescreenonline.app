@@ -22,12 +22,22 @@ export function CategoryPage() {
     );
   }
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://whitescreenonline.app/' },
+      { '@type': 'ListItem', position: 2, name: category.name, item: `https://whitescreenonline.app/category/${category.slug}` },
+    ],
+  };
+
   return (
     <Layout>
       <PageSEO
         title={`${category.name} — Free Online Tools | White Screen Online`}
         description={`${category.description} Browse all ${tools.length} free tools. No login required.`}
-        canonical={`https://screenhub.app/category/${category.slug}`}
+        canonical={`https://whitescreenonline.app/category/${category.slug}`}
+        jsonLd={breadcrumbSchema}
       />
 
       <div className="wrap" style={{ paddingTop: 28, paddingBottom: 72 }}>

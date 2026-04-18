@@ -16,7 +16,7 @@ export function Footer() {
         </span>
         <nav style={{ display: 'flex', gap: 20, flexWrap: 'wrap' }}>
           {[
-            { label: 'Contact',  href: 'mailto:hello@screenhub.app', external: true },
+            { label: 'Contact',  href: 'mailto:hello@whitescreenonline.app', external: true },
             { label: 'Privacy',  href: '/privacy-policy' },
             { label: 'Terms',    href: '/terms' },
           ].map(({ label, href, external }) =>

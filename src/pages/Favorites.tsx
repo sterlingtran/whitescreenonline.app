@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { getTool } from '@/src/data/tools';
 import { PageSEO } from '@/src/components/PageSEO';
 import { Layout } from '@/src/components/Layout';
@@ -17,8 +18,11 @@ export function Favorites() {
       <PageSEO
         title="My Favorites - White Screen Online"
         description="Your bookmarked tools on White Screen Online"
-        canonical="https://screenhub.app/favorites"
+        canonical="https://whitescreenonline.app/favorites"
       />
+      <Helmet>
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
 
       <div className="page-wrap py-12">
         <nav aria-label="Breadcrumb" className="mb-8">

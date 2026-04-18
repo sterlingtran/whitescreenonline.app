@@ -3,302 +3,320 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://screenhub.app/</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
   </url>
 
   <!-- Category Pages -->
   <url>
-    <loc>https://screenhub.app/category/solid-colors</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/category/solid-colors</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/category/lighting</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/category/lighting</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/category/prank-screens</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/category/prank-screens</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/category/fake-updates</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/category/fake-updates</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/category/screensavers</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/category/screensavers</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/category/timers</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/category/timers</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/category/entertainment</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/category/entertainment</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <!-- Solid Color Tools -->
   <url>
-    <loc>https://screenhub.app/tool/white-screen</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/white-screen</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/tool/black-screen</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/black-screen</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/tool/red-screen</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/red-screen</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/tool/green-screen</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/green-screen</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/tool/blue-screen</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/blue-screen</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/tool/yellow-screen</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/yellow-screen</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/tool/orange-screen</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/orange-screen</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/tool/pink-screen</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/pink-screen</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/tool/purple-screen</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/purple-screen</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://whitescreenonline.app/tool/custom-color-screen</loc>
+    <lastmod>2026-04-17</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://whitescreenonline.app/tool/dead-pixel-test</loc>
+    <lastmod>2026-04-17</lastmod>
+    <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <!-- Lighting Tools -->
   <url>
-    <loc>https://screenhub.app/tool/zoom-lighting</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/zoom-lighting</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/tool/ring-light</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/ring-light</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/tool/rgb-gradient</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/rgb-gradient</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <!-- Prank Screens -->
   <url>
-    <loc>https://screenhub.app/tool/white-noise</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/white-noise</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/tool/broken-screen</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/broken-screen</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/tool/radar-screen</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/radar-screen</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/tool/bsod</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/bsod</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/tool/hacker-typer</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/hacker-typer</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <!-- Fake Update Screens -->
   <url>
-    <loc>https://screenhub.app/tool/windows-10-update</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/windows-10-update</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/tool/windows-xp-update</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/windows-xp-update</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/tool/macos-update</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/macos-update</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/tool/ubuntu-update</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/ubuntu-update</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/tool/chromeos-update</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/chromeos-update</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <!-- Screensavers -->
   <url>
-    <loc>https://screenhub.app/tool/dvd-screensaver</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/dvd-screensaver</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/tool/flip-clock</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/flip-clock</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/tool/motivational-quote</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/motivational-quote</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/tool/smpte-color-bars</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/smpte-color-bars</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/tool/matrix-screensaver</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/matrix-screensaver</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/tool/starfield-screensaver</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/starfield-screensaver</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <!-- Timers & Productivity -->
   <url>
-    <loc>https://screenhub.app/tool/pomodoro-timer</loc>
-    <lastmod>2025-04-15</lastmod>
-    <priority>0.9</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://screenhub.app/tool/stopwatch</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/countdown-timer</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/tool/hiit-timer</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/pomodoro-timer</loc>
+    <lastmod>2026-04-17</lastmod>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://whitescreenonline.app/tool/stopwatch</loc>
+    <lastmod>2026-04-17</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://whitescreenonline.app/tool/hiit-timer</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/tool/focus-screen</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/focus-screen</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/tool/meditation-breather</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/meditation-breather</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <!-- Ambient & Entertainment -->
   <url>
-    <loc>https://screenhub.app/tool/fireplace-ambient</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/fireplace-ambient</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/tool/rain-ambient</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/rain-ambient</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/tool/particle-system</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/tool/particle-system</loc>
+    <lastmod>2026-04-17</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://whitescreenonline.app/tool/productivity-dashboard</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <!-- Utility Pages -->
   <url>
-    <loc>https://screenhub.app/favorites</loc>
-    <lastmod>2025-04-15</lastmod>
-    <priority>0.5</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://screenhub.app/privacy-policy</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/privacy-policy</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.4</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>https://screenhub.app/terms</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://whitescreenonline.app/terms</loc>
+    <lastmod>2026-04-17</lastmod>
     <priority>0.4</priority>
     <changefreq>yearly</changefreq>
   </url>

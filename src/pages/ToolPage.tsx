@@ -164,14 +164,24 @@ export function ToolPage() {
     })),
   };
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://whitescreenonline.app/' },
+      ...(category ? [{ '@type': 'ListItem', position: 2, name: category.name, item: `https://whitescreenonline.app/category/${category.slug}` }] : []),
+      { '@type': 'ListItem', position: category ? 3 : 2, name: tool.name, item: `https://whitescreenonline.app/tool/${tool.slug}` },
+    ],
+  };
+
   return (
     <Layout>
       <PageSEO
         title={tool.seoTitle}
         description={tool.seoDescription}
-        canonical={`https://screenhub.app/tool/${tool.slug}`}
+        canonical={`https://whitescreenonline.app/tool/${tool.slug}`}
+        jsonLd={[faqSchema, breadcrumbSchema]}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <div className="wrap" style={{ paddingTop: 28, paddingBottom: 72 }}>
 

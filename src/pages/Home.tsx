@@ -7,6 +7,17 @@ import { ColorScreen } from '@/src/tools/ColorScreen';
 import { TOOLS, CATEGORIES } from '@/src/data/tools';
 import { getFAQs } from '@/src/data/faqs';
 
+const homeFaqs = getFAQs('white-screen');
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: homeFaqs.map(({ q, a }) => ({
+    '@type': 'Question',
+    name: q,
+    acceptedAnswer: { '@type': 'Answer', text: a },
+  })),
+};
+
 
 /* ── Tools grouped by category (white-screen excluded — shown as hero) ── */
 const categoryGroups = CATEGORIES.map(cat => ({
@@ -20,14 +31,17 @@ export function Home() {
       <PageSEO
         title="White Screen Tool — Free Full-Screen Color Display"
         description="Free white screen tool for monitor cleaning, dead pixel detection, photography lighting, and display testing. 30+ color screens, 480p to 8K download. No login."
-        canonical="https://screenhub.app/"
-        jsonLd={{
-          '@context': 'https://schema.org',
-          '@type': 'WebSite',
-          name: 'White Screen Online',
-          url: 'https://screenhub.app/',
-          description: 'Free full-screen color tools for display testing and creative projects.',
-        }}
+        canonical="https://whitescreenonline.app/"
+        jsonLd={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: 'White Screen Online',
+            url: 'https://whitescreenonline.app/',
+            description: 'Free full-screen color tools for display testing and creative projects.',
+          },
+          faqSchema,
+        ]}
       />
 
       <div className="wrap" style={{ paddingTop: 36, paddingBottom: 72 }}>
@@ -81,7 +95,7 @@ export function Home() {
           <p className="label" style={{ marginBottom: 16 }}>
             Everything you need to know about white screen.
           </p>
-          <FAQ faqs={getFAQs('white-screen')} />
+          <FAQ faqs={homeFaqs} />
         </section>
 
       </div>
