@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <!-- Mobile App Meta -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#4F46E5" />
+
+    <!-- Default SEO (overridden per-page by react-helmet-async) -->
+    <title>ScreenHub - Free Online Screen Tools | Colors, Timers & More</title>
+    <meta name="description" content="Free full-screen utility tools for every need. Solid color screens, lighting simulators, timers, screensavers, prank screens &amp; more. No login required." />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ScreenHub" />
+    <meta property="og:title" content="ScreenHub - Free Online Screen Tools" />
+    <meta property="og:description" content="30+ free full-screen utility tools. Solid colors, lighting, timers, screensavers, and prank screens. Instant, no login required." />
+    <meta property="og:image" content="https://screenhub.app/og-image.png" />
+    <meta property="og:url" content="https://screenhub.app/" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@screenhubapp" />
+    <meta name="twitter:title" content="ScreenHub - Free Online Screen Tools" />
+    <meta name="twitter:description" content="30+ free full-screen utility tools. Solid colors, lighting, timers, screensavers, and more." />
+    <meta name="twitter:image" content="https://screenhub.app/og-image.png" />
+
+    <link rel="canonical" href="https://screenhub.app/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- DNS Prefetch / Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
+
+    <!-- Organization Schema (Task 1) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ScreenHub",
+      "url": "https://screenhub.app",
+      "logo": "https://screenhub.app/og-image.png",
+      "description": "Free full-screen utility tools for every need. Solid colors, lighting simulators, timers, screensavers, prank screens, and more.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "email": "hello@screenhub.app"
+      }
+    }
+    </script>
+
+    <!-- WebSite Schema with SearchAction (Task 4) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "ScreenHub",
+      "url": "https://screenhub.app",
+      "description": "Free full-screen utility tools for every need — solid colors, lighting, timers, screensavers, and prank screens.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://screenhub.app/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!--app-head-->
+  </head>
+  <body>
+    <div id="root"><!--app-html--></div>
+    <script type="module" src="/entry-client.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,154 @@
+@import "tailwindcss";
+@source "../src";
+@source "../entry-client.tsx";
+@source "../App.tsx";
+
+/* ── Design tokens ───────────────────────────────── */
+:root {
+  --bg:           #f9f9f9;
+  --surface:      #ffffff;
+  --text:         #1a1a1a;
+  --text-2:       #666666;
+  --text-3:       #999999;
+  --border:       rgba(0,0,0,0.10);
+  --border-md:    rgba(0,0,0,0.15);
+  --radius-sm:    6px;
+  --radius:       10px;
+  --radius-lg:    14px;
+  --shadow:       0 2px 8px rgba(0,0,0,0.08);
+  --shadow-hover: 0 4px 16px rgba(0,0,0,0.12);
+  --font:         -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica Neue, Arial, sans-serif;
+}
+
+/* ── Reset ───────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a  { text-decoration: none; color: inherit; }
+button { cursor: pointer; font-family: inherit; }
+input, select, textarea { font-family: inherit; }
+
+/* ── Layout ──────────────────────────────────────── */
+.wrap {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ── Typography ──────────────────────────────────── */
+.h1 { font-size: clamp(24px, 4vw, 36px); font-weight: 600; line-height: 1.25; }
+.h2 { font-size: 22px; font-weight: 600; line-height: 1.3; }
+.h3 { font-size: 16px; font-weight: 600; }
+.body-sm { font-size: 14px; line-height: 1.6; color: var(--text-2); }
+.label  { font-size: 13px; color: var(--text-3); }
+
+/* ── Card / Surface ──────────────────────────────── */
+.card {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+/* ── Buttons ─────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  transition: opacity 0.15s, background 0.15s, box-shadow 0.15s;
+}
+.btn:hover { opacity: 0.88; box-shadow: var(--shadow-hover); }
+.btn-dark  { background: var(--text); color: #fff; }
+.btn-ghost { background: transparent; border: 1px solid var(--border-md); color: var(--text-2); }
+.btn-ghost:hover { background: rgba(0,0,0,0.04); opacity: 1; }
+
+/* ── Resolution pill buttons ─────────────────────── */
+.res-btn {
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid var(--border-md);
+  background: var(--surface);
+  color: var(--text-2);
+  transition: all 0.12s;
+}
+.res-btn:hover   { border-color: var(--text); color: var(--text); background: rgba(0,0,0,0.03); }
+.res-btn.active  { background: var(--text); color: #fff; border-color: var(--text); }
+
+/* ── Color tool cards ────────────────────────────── */
+.tool-card {
+  display: block;
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.tool-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+
+/* ── Landscape tool cards (home page category sections) ── */
+.landscape-card {
+  display: block;
+  text-decoration: none;
+}
+.landscape-thumb {
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.landscape-card:hover .landscape-thumb {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+.landscape-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-2);
+  text-align: center;
+  margin-top: 7px;
+  line-height: 1.3;
+}
+.landscape-card:hover .landscape-label {
+  color: var(--text);
+}
+
+/* ── Divider ─────────────────────────────────────── */
+.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
+
+/* ── Scrollbar ───────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 99px; }
+
+/* ── Responsive ──────────────────────────────────── */
+@media (max-width: 640px) {
+  .wrap { padding: 0 16px; }
+}
