@@ -5,4 +5,4 @@ Allow: /
 Disallow: /favorites
 
 # Sitemap location
-Sitemap: https://whitescreenonline.app/sitemap.xml
+Sitemap: https://www.whitescreenonline.app/sitemap.xml

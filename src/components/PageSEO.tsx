@@ -15,8 +15,8 @@ interface PageSEOProps {
 export function PageSEO({
   title,
   description,
-  canonical = 'https://whitescreenonline.app/',
-  ogImage = 'https://whitescreenonline.app/og-image.svg',
+  canonical = 'https://www.whitescreenonline.app/',
+  ogImage = 'https://www.whitescreenonline.app/og-image.svg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
   noindex = false,

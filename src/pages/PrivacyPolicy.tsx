@@ -9,7 +9,7 @@ export function PrivacyPolicy() {
       <PageSEO
         title="Privacy Policy - White Screen Online"
         description="Privacy policy for White Screen Online"
-        canonical="https://whitescreenonline.app/privacy-policy"
+        canonical="https://www.whitescreenonline.app/privacy-policy"
       />
 
       <div className="max-w-4xl mx-auto px-4 py-12">

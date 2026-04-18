@@ -8,7 +8,7 @@
 import { writeFileSync, existsSync } from 'fs';
 import { TOOLS, CATEGORIES } from '../src/data/tools';
 
-const BASE_URL = 'https://whitescreenonline.app';
+const BASE_URL = 'https://www.whitescreenonline.app';
 const today = new Date().toISOString().split('T')[0];
 
 /* ── Priority rules ──────────────────────────────── */

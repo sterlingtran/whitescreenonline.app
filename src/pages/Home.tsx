@@ -31,20 +31,20 @@ export function Home() {
       <PageSEO
         title="White Screen Online - Free Monitor Test & Color Display Tools"
         description="Free white screen tool for monitor cleaning, dead pixel detection, photography lighting, and display testing. 30+ color screens, 480p to 8K download. No login."
-        canonical="https://whitescreenonline.app/"
+        canonical="https://www.whitescreenonline.app/"
         jsonLd={[
           {
             '@context': 'https://schema.org',
             '@type': 'WebSite',
             name: 'White Screen Online',
-            url: 'https://whitescreenonline.app/',
+            url: 'https://www.whitescreenonline.app/',
             description: 'Free full-screen color tools for display testing and creative projects.',
           },
           {
             '@context': 'https://schema.org',
             '@type': 'WebApplication',
             name: 'White Screen Online',
-            url: 'https://whitescreenonline.app/',
+            url: 'https://www.whitescreenonline.app/',
             description: 'Free full-screen color display tools for monitor testing, dead pixel detection, photography lighting, and creative projects.',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',

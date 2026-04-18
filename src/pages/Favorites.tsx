@@ -18,7 +18,7 @@ export function Favorites() {
       <PageSEO
         title="My Favorites - White Screen Online"
         description="Your bookmarked tools on White Screen Online"
-        canonical="https://whitescreenonline.app/favorites"
+        canonical="https://www.whitescreenonline.app/favorites"
       />
       <Helmet>
         <meta name="robots" content="noindex, follow" />

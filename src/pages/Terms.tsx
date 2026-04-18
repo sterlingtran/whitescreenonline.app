@@ -9,7 +9,7 @@ export function Terms() {
       <PageSEO
         title="Terms of Service - White Screen Online"
         description="Terms of service for White Screen Online"
-        canonical="https://whitescreenonline.app/terms"
+        canonical="https://www.whitescreenonline.app/terms"
       />
 
       <div className="max-w-4xl mx-auto px-4 py-12">

@@ -26,8 +26,8 @@ export function CategoryPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://whitescreenonline.app/' },
-      { '@type': 'ListItem', position: 2, name: category.name, item: `https://whitescreenonline.app/category/${category.slug}` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.whitescreenonline.app/' },
+      { '@type': 'ListItem', position: 2, name: category.name, item: `https://www.whitescreenonline.app/category/${category.slug}` },
     ],
   };
 
@@ -36,7 +36,7 @@ export function CategoryPage() {
       <PageSEO
         title={`${category.name} — Free Online Tools | White Screen Online`}
         description={`${category.description} Browse all ${tools.length} free tools. No login required.`}
-        canonical={`https://whitescreenonline.app/category/${category.slug}`}
+        canonical={`https://www.whitescreenonline.app/category/${category.slug}`}
         jsonLd={breadcrumbSchema}
       />
 
