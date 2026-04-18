@@ -12,6 +12,7 @@ const FavoritesContext = createContext<FavoritesContextType | undefined>(undefin
 
 export function FavoritesProvider({ children }: { children: ReactNode }) {
   const [favorites, setFavorites] = useState<Set<string>>(() => {
+    if (typeof window === 'undefined') return new Set();
     try {
       const saved = localStorage.getItem('screenhub_favorites');
       if (saved) {

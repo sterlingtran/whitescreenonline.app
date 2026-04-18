@@ -11,6 +11,8 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<Theme>(() => {
+    if (typeof window === 'undefined') return 'light';
+
     // Check localStorage
     const saved = localStorage.getItem('screenhub_theme');
     if (saved === 'light' || saved === 'dark') {

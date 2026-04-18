@@ -5,7 +5,7 @@
  * Usage:  npx tsx scripts/generate-sitemap.ts
  */
 
-import { writeFileSync, mkdirSync, existsSync } from 'fs';
+import { writeFileSync, existsSync } from 'fs';
 import { TOOLS, CATEGORIES } from '../src/data/tools';
 
 const BASE_URL = 'https://whitescreenonline.app';

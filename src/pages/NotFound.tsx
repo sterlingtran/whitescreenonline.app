@@ -9,6 +9,7 @@ export function NotFound() {
       <PageSEO
         title="Page Not Found - White Screen Online"
         description="This page does not exist"
+        noindex
       />
 
       <div className="max-w-6xl mx-auto px-4 py-20 text-center">
