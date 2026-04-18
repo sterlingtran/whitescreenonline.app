@@ -25,7 +25,8 @@ export function Terms() {
           </ol>
         </nav>
 
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-8">Terms of Service</h1>
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">Terms of Service</h1>
+        <p className="text-sm text-gray-500 dark:text-gray-400 mb-8">Last updated: April 18, 2026</p>
 
         <div className="space-y-6">
           <section>
@@ -79,7 +80,7 @@ export function Terms() {
           <section>
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">7. Governing Law</h2>
             <p className="text-gray-600 dark:text-gray-400">
-              These terms and conditions are governed by and construed in accordance with the laws of the jurisdiction in which White Screen Online operates.
+              These terms and conditions are governed by and construed in accordance with the laws of Canada and the Province of British Columbia. Any disputes arising from these terms shall be subject to the exclusive jurisdiction of the courts of British Columbia, Canada.
             </p>
           </section>
         </div>

@@ -16,6 +16,7 @@ export function Footer() {
         </span>
         <nav style={{ display: 'flex', gap: 20, flexWrap: 'wrap' }}>
           {[
+            { label: 'About',    href: '/about' },
             { label: 'Contact',  href: 'mailto:hello@whitescreenonline.app', external: true },
             { label: 'Privacy',  href: '/privacy-policy' },
             { label: 'Terms',    href: '/terms' },

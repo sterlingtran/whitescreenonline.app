@@ -51,8 +51,9 @@ const urls: UrlEntry[] = [
   })),
 
   // Utility pages (no Favorites — noindex)
-  { loc: `${BASE_URL}/privacy-policy`, priority: '0.4', changefreq: 'yearly' },
-  { loc: `${BASE_URL}/terms`,          priority: '0.4', changefreq: 'yearly' },
+  { loc: `${BASE_URL}/about`,          priority: '0.5', changefreq: 'yearly' },
+  { loc: `${BASE_URL}/privacy-policy`, priority: '0.3', changefreq: 'yearly' },
+  { loc: `${BASE_URL}/terms`,          priority: '0.3', changefreq: 'yearly' },
 ];
 
 /* ── Render XML ──────────────────────────────────── */

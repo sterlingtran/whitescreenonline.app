@@ -25,6 +25,7 @@ const routes = [
   '/',
   ...CATEGORIES.map((c) => `/category/${c.slug}`),
   ...TOOLS.map((t) => `/tool/${t.slug}`),
+  '/about',
   '/privacy-policy',
   '/terms',
 ];
