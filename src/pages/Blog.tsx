@@ -15,6 +15,21 @@ export function Blog() {
         title="Blog — White Screen Online"
         description="Tips, guides, and how-tos for display testing, lighting for video calls, productivity tools, and more. From the team at White Screen Online."
         canonical="https://www.whitescreenonline.app/blog"
+        jsonLd={[{
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          name: 'Blog — White Screen Online',
+          description: 'Tips, guides, and how-tos for display testing, lighting for video calls, productivity tools, and more.',
+          url: 'https://www.whitescreenonline.app/blog',
+          hasPart: BLOG_POSTS.map(p => ({
+            '@type': 'BlogPosting',
+            headline: p.title,
+            description: p.description,
+            datePublished: p.date,
+            url: `https://www.whitescreenonline.app/blog/${p.slug}`,
+            author: { '@type': 'Organization', name: 'White Screen Online' },
+          })),
+        }]}
       />
 
       <div className="wrap" style={{ maxWidth: 760, paddingTop: 36, paddingBottom: 72 }}>

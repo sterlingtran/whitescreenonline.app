@@ -58,7 +58,7 @@ export function PhoneScreenRingLight({ post }: Props) {
         <Link to="/tool/zoom-lighting" style={{ color: 'var(--text)' }}>Zoom Lighting</Link> tool.
       </p>
       <div style={sx.callout}>
-        <strong>Color temperature tip:</strong> Standard daylight is 5500–6500K (blue-white).
+        <strong><a href="https://en.wikipedia.org/wiki/Color_temperature" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>Color temperature</a> tip:</strong> Standard daylight is 5500–6500K (blue-white).
         Incandescent bulbs are 2700–3200K (warm orange). A warm cream hex like #FFE8C8 approximates
         roughly 3500K — flattering for skin tones without making everything look orange.
       </div>

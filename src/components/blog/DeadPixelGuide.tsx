@@ -121,8 +121,9 @@ export function DeadPixelGuide({ post }: Props) {
 
       <h2 style={sx.h2}>How Many Dead Pixels Are Acceptable?</h2>
       <p style={sx.p}>
-        This depends on the panel grade and manufacturer policy. The ISO 9241-307 standard defines
-        pixel fault classes:
+        This depends on the panel grade and manufacturer policy. The{' '}
+        <a href="https://en.wikipedia.org/wiki/ISO_9241" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text)' }}>ISO 9241-307 standard</a>{' '}
+        defines pixel fault classes:
       </p>
       <ul style={sx.ul}>
         <li><strong>Class 1</strong> — Zero allowed defects. What you expect from a premium display.</li>

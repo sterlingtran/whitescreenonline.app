@@ -1,5 +1,13 @@
 {
   "outputDirectory": "dist/client",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "whitescreenonline.app" }],
+      "destination": "https://www.whitescreenonline.app/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",

@@ -176,8 +176,9 @@ export function PomodoroStudyGuide({ post }: Props) {
         <li>Play <Link to="/tool/white-noise" style={{ color: 'var(--text)' }}>white noise</Link> or
           brown noise at a moderate volume to mask unpredictable background sounds (conversation,
           traffic) that interrupt attention without masking the silence you might need for thinking.</li>
-        <li>Put your phone face-down in a different room. A 2017 University of Texas study found
-          that the mere visible presence of a smartphone reduces available cognitive capacity —
+        <li>Put your phone face-down in a different room. A{' '}
+          <a href="https://doi.org/10.1086/691462" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text)' }}>2017 University of Texas study</a>{' '}
+          found that the mere visible presence of a smartphone reduces available cognitive capacity —
           even if it's off.</li>
         <li>Use a dedicated browser profile or window for studying with no bookmarks bar and
           no personal tabs visible.</li>

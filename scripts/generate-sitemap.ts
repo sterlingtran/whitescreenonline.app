@@ -31,7 +31,7 @@ const TOOL_PRIORITY_OVERRIDE: Record<string, string> = {
 };
 
 /* ── Build URL list ──────────────────────────────── */
-type UrlEntry = { loc: string; priority: string; changefreq: string };
+type UrlEntry = { loc: string; priority: string; changefreq: string; lastmod?: string };
 
 const urls: UrlEntry[] = [
   // Homepage (white screen hero)
@@ -52,11 +52,12 @@ const urls: UrlEntry[] = [
   })),
 
   // Blog index + posts
-  { loc: `${BASE_URL}/blog`,           priority: '0.7', changefreq: 'monthly' },
+  { loc: `${BASE_URL}/blog`,           priority: '0.7', changefreq: 'monthly', lastmod: today },
   ...BLOG_POSTS.map(p => ({
     loc:        `${BASE_URL}/blog/${p.slug}`,
     priority:   '0.7',
-    changefreq: 'monthly',
+    changefreq: 'monthly' as const,
+    lastmod:    p.date,
   })),
 
   // Utility pages (no Favorites — noindex)
@@ -69,10 +70,10 @@ const urls: UrlEntry[] = [
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-${urls.map(({ loc, priority, changefreq }) =>
+${urls.map(({ loc, priority, changefreq, lastmod }) =>
 `  <url>
     <loc>${loc}</loc>
-    <lastmod>${today}</lastmod>
+    <lastmod>${lastmod ?? today}</lastmod>
     <priority>${priority}</priority>
     <changefreq>${changefreq}</changefreq>
   </url>`).join('\n\n')}

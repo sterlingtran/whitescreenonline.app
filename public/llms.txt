@@ -1,0 +1,74 @@
+# White Screen Online — llms.txt
+# https://www.whitescreenonline.app
+# Free browser-based utility tools for screens, timers, lighting, and focus.
+# All tools run in-browser, no account or install required.
+
+## About
+White Screen Online provides 40+ free browser tools including solid color screens,
+lighting aids for video calls, productivity timers, prank screens, screensavers,
+and ambient tools. Tools work on any device with a modern browser.
+
+## Tools
+
+### Solid Colors
+- White Screen: https://www.whitescreenonline.app/tool/white-screen
+- Black Screen: https://www.whitescreenonline.app/tool/black-screen
+- Red Screen: https://www.whitescreenonline.app/tool/red-screen
+- Green Screen: https://www.whitescreenonline.app/tool/green-screen
+- Blue Screen: https://www.whitescreenonline.app/tool/blue-screen
+- Yellow Screen: https://www.whitescreenonline.app/tool/yellow-screen
+- Orange Screen: https://www.whitescreenonline.app/tool/orange-screen
+- Pink Screen: https://www.whitescreenonline.app/tool/pink-screen
+- Purple Screen: https://www.whitescreenonline.app/tool/purple-screen
+- Custom Color Screen: https://www.whitescreenonline.app/tool/custom-color-screen
+- Dead Pixel Test: https://www.whitescreenonline.app/tool/dead-pixel-test
+
+### Lighting
+- Zoom Lighting: https://www.whitescreenonline.app/tool/zoom-lighting
+- Ring Light Simulator: https://www.whitescreenonline.app/tool/ring-light
+- RGB Gradient Light: https://www.whitescreenonline.app/tool/rgb-gradient
+
+### Timers & Productivity
+- Pomodoro Timer: https://www.whitescreenonline.app/tool/pomodoro-timer
+- Countdown Timer: https://www.whitescreenonline.app/tool/countdown-timer
+- Stopwatch: https://www.whitescreenonline.app/tool/stopwatch
+- HIIT Workout Timer: https://www.whitescreenonline.app/tool/hiit-timer
+- Focus/Study Screen: https://www.whitescreenonline.app/tool/focus-screen
+- Meditation Breather: https://www.whitescreenonline.app/tool/meditation-breather
+- Tip Screen: https://www.whitescreenonline.app/tool/tip-screen
+
+### Screensavers & Ambient
+- DVD Screensaver: https://www.whitescreenonline.app/tool/dvd-screensaver
+- Matrix Screensaver: https://www.whitescreenonline.app/tool/matrix-screensaver
+- Starfield Screensaver: https://www.whitescreenonline.app/tool/starfield-screensaver
+- Particle System: https://www.whitescreenonline.app/tool/particle-system
+- Flip Clock: https://www.whitescreenonline.app/tool/flip-clock
+- Motivational Quotes: https://www.whitescreenonline.app/tool/motivational-quote
+- Rain Ambient: https://www.whitescreenonline.app/tool/rain-ambient
+- White Noise Screen: https://www.whitescreenonline.app/tool/white-noise
+- SMPTE Color Bars: https://www.whitescreenonline.app/tool/smpte-color-bars
+
+### Prank Screens
+- Broken Screen: https://www.whitescreenonline.app/tool/broken-screen
+- Radar Screen: https://www.whitescreenonline.app/tool/radar-screen
+- Blue Screen of Death: https://www.whitescreenonline.app/tool/bsod
+- Hacker Typer: https://www.whitescreenonline.app/tool/hacker-typer
+
+### Fake Updates
+- Windows 10 Update: https://www.whitescreenonline.app/tool/windows-10-update
+- Windows XP Update: https://www.whitescreenonline.app/tool/windows-xp-update
+- macOS Update: https://www.whitescreenonline.app/tool/macos-update
+- Ubuntu Update: https://www.whitescreenonline.app/tool/ubuntu-update
+- Chrome OS Update: https://www.whitescreenonline.app/tool/chromeos-update
+
+## Blog
+
+- How to Use Your Phone or Laptop Screen as a DIY Ring Light: https://www.whitescreenonline.app/blog/phone-screen-as-ring-light
+- How to Test Your Monitor for Dead Pixels — Free, No Software Required: https://www.whitescreenonline.app/blog/how-to-test-monitor-dead-pixels
+- The Best Free Browser Tools for Focus and Deep Work: https://www.whitescreenonline.app/blog/best-focus-tools-working-from-home
+- Color Temperature Explained: Warm vs Cool Light for Video Calls and Photography: https://www.whitescreenonline.app/blog/color-temperature-guide
+- How to Use the Pomodoro Technique for Studying: https://www.whitescreenonline.app/blog/pomodoro-technique-for-studying
+- OLED Burn-In Explained: What Causes It and How Screensavers Help: https://www.whitescreenonline.app/blog/oled-burn-in-screensavers
+
+## Sitemap
+https://www.whitescreenonline.app/sitemap.xml

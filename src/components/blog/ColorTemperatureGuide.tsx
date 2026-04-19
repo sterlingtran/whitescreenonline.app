@@ -37,7 +37,7 @@ export function ColorTemperatureGuide({ post }: Props) {
 
       <h2 style={sx.h2}>What Is Color Temperature?</h2>
       <p style={sx.p}>
-        Color temperature describes the color of a light source, measured in Kelvin (K). Despite the
+        <a href="https://en.wikipedia.org/wiki/Color_temperature" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text)' }}>Color temperature</a> describes the color of a light source, measured in Kelvin (K). Despite the
         name, it has nothing to do with heat — it's borrowed from physics. When a "black body" (an
         idealized object that absorbs all light) is heated, it glows different colors at different
         temperatures: red-orange at lower temperatures, shifting to white and then blue-white as it

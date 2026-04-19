@@ -50,9 +50,10 @@ export function BlogPost() {
   return (
     <Layout>
       <PageSEO
-        title={`${post.title} — White Screen Online`}
+        title={post.title}
         description={post.description}
         canonical={`https://www.whitescreenonline.app/blog/${post.slug}`}
+        ogType="article"
         jsonLd={[articleSchema]}
       />
 

@@ -42,7 +42,7 @@ export function OLEDBurnIn({ post }: Props) {
         because it lights everything equally.
       </p>
       <p style={sx.p}>
-        OLED is fundamentally different. Each pixel is its own light source — a tiny organic compound
+        <a href="https://en.wikipedia.org/wiki/OLED" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text)' }}>OLED</a> is fundamentally different. Each pixel is its own light source — a tiny organic compound
         that emits light when current passes through it. These organic compounds degrade over time:
         the more a pixel emits light, and the brighter that light, the faster the organic material
         breaks down. A pixel that has displayed a bright red channel for thousands of hours will dim

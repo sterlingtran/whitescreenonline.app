@@ -57,7 +57,7 @@ export function WorkFromHomeFocus({ post }: Props) {
       </p>
       <ul style={sx.ul}>
         <li><strong>Temporal anchoring:</strong> Knowing a break is coming makes it easier to resist distractions in the short term. You don't have to resist Twitter forever — just for 23 more minutes.</li>
-        <li><strong>The Zeigarnik Effect:</strong> Incomplete tasks occupy working memory more than completed ones. Starting a Pomodoro creates an "open loop" that your brain wants to close, which reduces the urge to switch tasks.</li>
+        <li><strong>The <a href="https://en.wikipedia.org/wiki/Zeigarnik_effect" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text)' }}>Zeigarnik Effect</a>:</strong> Incomplete tasks occupy working memory more than completed ones. Starting a Pomodoro creates an "open loop" that your brain wants to close, which reduces the urge to switch tasks.</li>
       </ul>
       <p style={sx.p}>
         A 2016 study in <em>Computers in Human Behavior</em> found that structured work-break cycles
@@ -151,7 +151,7 @@ export function WorkFromHomeFocus({ post }: Props) {
         </p>
       </div>
       <p style={sx.p}>
-        Parkinson's Law states that work expands to fill the time available. A task you expect to take
+        <a href="https://en.wikipedia.org/wiki/Parkinson%27s_law" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text)' }}>Parkinson's Law</a> states that work expands to fill the time available. A task you expect to take
         two hours will take two hours, whether or not it actually requires that long. Time-boxing —
         setting an explicit countdown for a task — creates artificial urgency that counteracts this.
       </p>
