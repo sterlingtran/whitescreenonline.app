@@ -1,17 +1,13 @@
 {
   "outputDirectory": "dist/client",
+  "cleanUrls": true,
+  "trailingSlash": false,
   "redirects": [
     {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "whitescreenonline.app" }],
       "destination": "https://www.whitescreenonline.app/:path*",
       "permanent": true
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
     }
   ]
 }
