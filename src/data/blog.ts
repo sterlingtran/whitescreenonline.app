@@ -91,6 +91,22 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
   },
   {
+    slug: 'white-noise-vs-pink-noise-vs-brown-noise',
+    title: 'White Noise vs Pink Noise vs Brown Noise: Which Is Best for Sleep and Focus?',
+    description:
+      'The real differences between white, pink, and brown noise — and which one actually works for sleeping, studying, or blocking office distractions. The science explained without the jargon.',
+    date: '2026-04-25',
+    author: 'White Screen Online team',
+    readingTime: 7,
+    tags: ['white noise', 'sleep', 'focus', 'productivity'],
+    relatedTools: [
+      { slug: 'white-noise',        name: 'White Noise Screen' },
+      { slug: 'pomodoro-timer',     name: 'Pomodoro Timer' },
+      { slug: 'focus-screen',       name: 'Focus Screen' },
+      { slug: 'meditation-breather',name: 'Meditation Breather' },
+    ],
+  },
+  {
     slug: 'oled-burn-in-screensavers',
     title: 'OLED Burn-In Explained: What Causes It and How Screensavers Help',
     description:
