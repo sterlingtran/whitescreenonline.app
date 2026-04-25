@@ -91,6 +91,22 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
   },
   {
+    slug: 'white-background-photos-at-home',
+    title: 'How to Get a White Background for Photos at Home (No Studio, No Backdrop)',
+    description:
+      'Clean white background photos without buying a sweep or studio kit. Four DIY methods using screens, window light, and simple positioning — for product shots, headshots, and passport photos.',
+    date: '2026-04-25',
+    author: 'White Screen Online team',
+    readingTime: 6,
+    tags: ['photography', 'DIY', 'product photography', 'white screen'],
+    relatedTools: [
+      { slug: 'white-screen',        name: 'White Screen' },
+      { slug: 'custom-color-screen', name: 'Custom Color Screen' },
+      { slug: 'zoom-lighting',       name: 'Zoom Lighting' },
+      { slug: 'ring-light',          name: 'Ring Light Simulator' },
+    ],
+  },
+  {
     slug: 'white-noise-vs-pink-noise-vs-brown-noise',
     title: 'White Noise vs Pink Noise vs Brown Noise: Which Is Best for Sleep and Focus?',
     description:

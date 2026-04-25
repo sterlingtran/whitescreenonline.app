@@ -11,6 +11,7 @@ import { ColorTemperatureGuide } from '@/src/components/blog/ColorTemperatureGui
 import { PomodoroStudyGuide }    from '@/src/components/blog/PomodoroStudyGuide';
 import { OLEDBurnIn }            from '@/src/components/blog/OLEDBurnIn';
 import { NoiseColorGuide }       from '@/src/components/blog/NoiseColorGuide';
+import { WhiteBackgroundPhotos } from '@/src/components/blog/WhiteBackgroundPhotos';
 
 function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
@@ -119,6 +120,7 @@ export function BlogPost() {
         {post.slug === 'best-focus-tools-working-from-home'&& <WorkFromHomeFocus     post={post} />}
         {post.slug === 'color-temperature-guide'           && <ColorTemperatureGuide post={post} />}
         {post.slug === 'pomodoro-technique-for-studying'   && <PomodoroStudyGuide    post={post} />}
+        {post.slug === 'white-background-photos-at-home'         && <WhiteBackgroundPhotos post={post} />}
         {post.slug === 'white-noise-vs-pink-noise-vs-brown-noise' && <NoiseColorGuide post={post} />}
         {post.slug === 'oled-burn-in-screensavers'         && <OLEDBurnIn            post={post} />}
 
